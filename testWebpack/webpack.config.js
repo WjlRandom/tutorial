@@ -8,8 +8,8 @@ module.exports = {
         'test': "./src/assets/js/test.js",
     },
     output: {
-        path: path.join(__dirname, "./dist"), //必须是绝对路径
-        publicPath: "/",
+        path: path.join(__dirname, "./src/dist"), //必须是绝对路径
+        publicPath: "/dist/",
         filename: "[name].js"
     },
     devServer: {
