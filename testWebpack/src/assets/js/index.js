@@ -1,13 +1,16 @@
-import common from "./common.js"
+import "../style/index.less";
+import Module from "../../components/index/index";
 class Index {
     constructor() {
-        this.msg = "hello world 1111"
+        this.msg = "hello world 222"
         alert(this.msg);
-        common();
+        alert(process.env.NODE_ENV);
         this.init();
     }
     init() {
-        console.log("init");
+        new Module({
+            el: $("#module")
+        });
     }
 }
 new Index();
