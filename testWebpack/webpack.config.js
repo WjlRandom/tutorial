@@ -15,8 +15,6 @@ module.exports = {
     },
     devServer: {
         contentBase: path.join(__dirname, "src/pages"),
-        inline: true,
-        hot: true,
         port: "3333"
     },
     externals: {
@@ -49,8 +47,8 @@ module.exports = {
             }
         ]
     },
+
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new AssetsPlugin({
             filename: "src/stats.json"
         })

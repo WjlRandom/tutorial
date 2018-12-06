@@ -1,18 +1,20 @@
-function Event() {
-    this.handles = {}
-}
-Event.prototype = {
+module.exports = {
+    handles: {},
     on: function(handle, callback) {
-        if (!handles[handle]) {
-            handles[handle] = callback;
+        if (!this.handles[handle]) {
+            this.handles[handle] = callback;
         }
     },
     emit: function(handle) {
-        if (handles[handle]) {
-            var callback = handles[handle];
+        if (this.handles[handle]) {
+            var callback = this.handles[handle];
             var args = Array.prototype.slice.call(arguments, 1);
             callback(args);
         }
+    },
+    off: function(handle) {
+        if (this.handles[handle]) {
+            delete this.handles[handle]
+        }
     }
-}
-module.exports = Event;
+};
