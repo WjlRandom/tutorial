@@ -1,6 +1,6 @@
 import Tpl from "./index.ejs";
-// import Event from "lib/event";
-import Event from "../../assets/lib/event";
+import Event from "@lib/event";
+
 class Index {
     constructor(config) {
         console.log(config.el);
@@ -18,6 +18,7 @@ class Index {
                 link: "hahahh"
             })
         })
+
     }
 }
 Object.assign(Index.prototype, Event);
