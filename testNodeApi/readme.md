@@ -12,3 +12,10 @@
 ### 使用nodemon实现修改自动重启
 - npm install nodemon --save-dev
 - nodemon ../要启动的文件
+
+###ejs模板中引用css js文件路径
+- app.js中设置静态文件访问目录
+- 在ejs中引用时候文件路径相对于设置的静态文件目录
+
+###本地使用mangodb
+- 

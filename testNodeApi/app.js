@@ -18,10 +18,8 @@ app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use('/', indexRouter);
+app.use('/', indexRouter); //路由
 app.use(api); //使用接口服务
-
-
 
 
 module.exports = app;
