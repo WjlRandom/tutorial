@@ -2,6 +2,7 @@ var path = require("path");
 var webpack = require("webpack");
 var AssetsPlugin = require('assets-webpack-plugin');
 var uglifyjsPlugin = require("uglifyjs-webpack-plugin");
+var webpackInitPlugin = require("./src/plugins/webpackInitPlugin");
 module.exports = {
     mode: "development", //对应的会设置process.env.NODE_ENV
     entry: {
@@ -10,12 +11,14 @@ module.exports = {
         'test': "./src/assets/js/test.js",
     },
     output: {
-        path: path.join(__dirname, "./src/dist"), //必须是绝对路径
+        path: path.resolve(__dirname, "./src/dist"), //必须是绝对路径
         publicPath: "/dist/",
         filename: "[name].js?v=[hash]"
     },
     devServer: {
         contentBase: path.join(__dirname, "src/pages/"),
+        hot: true,
+        inline: true,
         port: "3333"
     },
 
@@ -53,9 +56,11 @@ module.exports = {
         }
     },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new AssetsPlugin({
             filename: "src/stats.json"
         }),
-        new uglifyjsPlugin()
+        new uglifyjsPlugin(),
+        new webpackInitPlugin()
     ]
 }
