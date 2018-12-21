@@ -3,6 +3,9 @@ var webpack = require("webpack");
 var AssetsPlugin = require('assets-webpack-plugin');
 var uglifyjsPlugin = require("uglifyjs-webpack-plugin");
 var webpackInitPlugin = require("./src/plugins/webpackInitPlugin");
+var webpackRenamePlugin = require("./src/plugins/webpackRenamePlugin");
+var webpackHashPlugin = require("./src/plugins/webpackHashPlugin");
+let distUrl = path.join(__dirname, "src/dist");
 module.exports = {
     mode: "development", //对应的会设置process.env.NODE_ENV
     entry: {
@@ -13,7 +16,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "./src/dist"), //必须是绝对路径
         publicPath: "/dist/",
-        filename: "[name].js?v=[hash]"
+        filename: "[name].js"
     },
     devServer: {
         contentBase: path.join(__dirname, "src/pages/"),
@@ -30,8 +33,8 @@ module.exports = {
                 use: {
                     loader: "babel-loader",
                     options: {
-                        presets: ["@babel/preset-env"], //按照最新ES语法规则解析
-                        plugins: ["transform-runtime"], //解决浏览器兼容性问题
+                        presets: ["@babel/preset-env"],
+                        plugins: ["transform-runtime"],
                     }
                 }
             },
@@ -57,10 +60,12 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new AssetsPlugin({
+        /* new AssetsPlugin({
             filename: "src/stats.json"
-        }),
-        new uglifyjsPlugin(),
-        new webpackInitPlugin()
+        }), */
+        // new uglifyjsPlugin(),
+        new webpackInitPlugin(distUrl),
+        new webpackRenamePlugin(),
+        new webpackHashPlugin(),
     ]
 }
