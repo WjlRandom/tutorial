@@ -19,3 +19,8 @@
 
 ###本地使用mangodb
 - 
+
+###上传文件过大的问题
+问题描述：request entity too large
+解决方案：app.use(bodyParser.json({limit:'50mb'}));
+        app.use(bodyParser.urlencoded({limit:'50mb',extended:true}));

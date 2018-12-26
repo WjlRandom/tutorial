@@ -1,7 +1,12 @@
+/*
+ *请求接口
+ */
 var express = require('express');
 var router = express.Router();
 var bodyParser = require("body-parser");
 var dataOperate = require("../database/index");
+var fs = require("fs");
+var path = require("path");
 router.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "*");
@@ -61,6 +66,36 @@ router.get("/findUser", function(req, res) {
 });
 router.post("/saveGdtId", bodyParser.json(), function(req, res) {
     dataOperate.insert(req.body.source, req.body.list);
+    res.json({
+        code: 0,
+        message: "成功",
+    });
+});
+
+router.post("/uploadImg", bodyParser.json(), function(req, res) {
+    var i = req.body.file.indexOf(";base64");
+    var imgType = req.body.file.substring(11, i);
+    var fileData = req.body.file.substring(i + 8);
+    var imgBuffer = new Buffer(fileData, "base64");
+    var hash = new Date().getTime();
+    var desDir = path.join(__dirname, "../public/images/")
+    var imgUrl = desDir + hash + "." + imgType;
+    fs.writeFileSync(imgUrl, imgBuffer);
+    res.json({
+        code: 0,
+        message: "成功",
+        imgUrl: imgUrl
+    });
+});
+router.post("/uploadImg1", function(req, res) {
+    req.setEncoding('binary');
+    let chunks = ''; // 文件数据
+    req.on('data', function(chunk) {
+        chunks += chunk;
+    });
+    req.on('end', function(d) {
+        console.log(chunks);
+    });
     res.json({
         code: 0,
         message: "成功",
