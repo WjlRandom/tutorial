@@ -1,21 +1,38 @@
 var path = require("path");
+var fs = require("fs");
 var webpack = require("webpack");
 var AssetsPlugin = require('assets-webpack-plugin');
 var uglifyjsPlugin = require("uglifyjs-webpack-plugin");
 var webpackInitPlugin = require("./src/plugins/webpackInitPlugin");
 var webpackRenamePlugin = require("./src/plugins/webpackRenamePlugin");
 var webpackHashPlugin = require("./src/plugins/webpackHashPlugin");
-let distUrl = path.join(__dirname, "src/dist");
+var distUrl = path.join(__dirname, "src/dist");
+var entry = {};
+
+function getEntry(root, dir) {
+    var url = path.join(root, dir);
+    var files = fs.readdirSync(url);
+    files.forEach(function(file) {
+        var filePath = path.join(url, file);
+        var stat = fs.statSync(filePath);
+        if (stat.isDirectory()) {
+            getEntry(filePath);
+        }
+        if (stat.isFile()) {
+            var key = file.replace(/.js/, "");
+            var index = filePath.indexOf(dir);
+            var value = "./" + filePath.substring(index);
+            entry[key] = value;
+        }
+    })
+    return entry;
+}
 module.exports = {
     mode: "development", //对应的会设置process.env.NODE_ENV
-    entry: {
-        'index': "./src/assets/js/index.js",
-        'common': "./src/assets/js/common.js",
-        'test': "./src/assets/js/test.js",
-    },
+    entry: getEntry(__dirname, "src/assets/js"),
     output: {
         path: path.resolve(__dirname, "./src/dist"), //必须是绝对路径
-        publicPath: "/dist/",
+        publicPath: "/",
         filename: "[name].js"
     },
     devServer: {
@@ -64,8 +81,8 @@ module.exports = {
             filename: "src/stats.json"
         }), */
         // new uglifyjsPlugin(),
-        new webpackInitPlugin(distUrl),
-        new webpackRenamePlugin(),
-        new webpackHashPlugin(),
+        //new webpackInitPlugin(distUrl),
+        //new webpackRenamePlugin(),
+        // new webpackHashPlugin(),
     ]
 }
