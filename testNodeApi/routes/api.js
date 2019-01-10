@@ -1,13 +1,13 @@
 /*
  *请求接口
  */
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 var bodyParser = require("body-parser");
 var dataOperate = require("../database/index");
 var fs = require("fs");
 var path = require("path");
-router.all('*', function(req, res, next) {
+router.all("*", function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "*");
     res.header("Access-Control-Allow-Methods", "*");
@@ -22,7 +22,7 @@ router.get("/random/:min/:max", function(req, res) {
         res.json({ error: "Bad request." });
         return;
     }
-    var result = Math.round((Math.random() * (max - min)) + min);
+    var result = Math.round(Math.random() * (max - min) + min);
     res.json({ result: result });
 });
 router.post("/saveUser", bodyParser.json(), function(req, res) {
@@ -42,7 +42,10 @@ router.post("/saveUser", bodyParser.json(), function(req, res) {
     });
 });
 router.post("/saveUsers", bodyParser.json(), function(req, res) {
-    var data = [{ name: "aaa", url: "www.aaa.com" }, { name: "bbb", url: "www.bbb.com" }]
+    var data = [
+        { name: "aaa", url: "www.aaa.com" },
+        { name: "bbb", url: "www.bbb.com" }
+    ];
     dataOperate.insert(data);
     res.json({
         code: 0,
@@ -51,7 +54,7 @@ router.post("/saveUsers", bodyParser.json(), function(req, res) {
 });
 router.get("/findUser", function(req, res) {
     var name = req.query.name;
-    var whereStr = { "name": name };
+    var whereStr = { name: name };
     if (name == undefined) {
         res.status(400);
         res.json({ error: "Bad request." });
@@ -68,7 +71,7 @@ router.post("/saveGdtId", bodyParser.json(), function(req, res) {
     dataOperate.insert(req.body.source, req.body.list);
     res.json({
         code: 0,
-        message: "成功",
+        message: "成功"
     });
 });
 
@@ -78,7 +81,7 @@ router.post("/uploadImg", bodyParser.json(), function(req, res) {
     var fileData = req.body.file.substring(i + 8);
     var imgBuffer = new Buffer(fileData, "base64");
     var hash = new Date().getTime();
-    var desDir = path.join(__dirname, "../public/images/")
+    var desDir = path.join(__dirname, "../public/images/");
     var imgUrl = desDir + hash + "." + imgType;
     fs.writeFileSync(imgUrl, imgBuffer);
     res.json({
@@ -88,17 +91,25 @@ router.post("/uploadImg", bodyParser.json(), function(req, res) {
     });
 });
 router.post("/uploadImg1", function(req, res) {
-    req.setEncoding('binary');
-    let chunks = ''; // 文件数据
-    req.on('data', function(chunk) {
+    req.setEncoding("binary");
+    let chunks = ""; // 文件数据
+    req.on("data", function(chunk) {
         chunks += chunk;
     });
-    req.on('end', function(d) {
+    req.on("end", function(d) {
         console.log(chunks);
     });
     res.json({
         code: 0,
-        message: "成功",
+        message: "成功"
+    });
+});
+router.post("/uploadChannel", function(req, res) {
+    var data = fs.readFileSync(path.resolve(process.cwd(), "./config/channel.json"), "utf8")
+    dataOperate.insertOne(JSON.parse(data), "channel");
+    res.json({
+        code: 0,
+        message: "成功"
     });
 });
 

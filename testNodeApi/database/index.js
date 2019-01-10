@@ -2,11 +2,11 @@ var MongoClient = require("mongodb").MongoClient;
 var dbUrl = "mongodb://localhost:27017/";
 var res = null;
 module.exports = {
-    insertOne: function(obj) {
+    insertOne: function(obj, collectionName) {
         MongoClient.connect(dbUrl, function(err, db) {
             if (err) throw err;
             var dbo = db.db("ceshi");
-            dbo.collection('site').insertOne(obj, function(err, res) {
+            dbo.collection(collectionName).insertOne(obj, function(err, res) {
                 if (err) throw err;
                 console.log("文档插入成功");
                 db.close();

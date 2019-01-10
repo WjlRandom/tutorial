@@ -11,6 +11,9 @@ router.get('/', function(req, res, next) {
 router.get('/channel', function(req, res, next) {
     res.render('channel', { title: 'Express', message: "请输入渠道号" });
 });
+router.get('/update', function(req, res, next) {
+    res.render('updateChannel', { title: '更新渠道号'});
+});
 router.get('/upload', function(req, res, next) {
     res.render('upload', { title: '文件上传' });
 });
