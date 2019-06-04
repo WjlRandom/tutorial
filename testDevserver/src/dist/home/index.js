@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "9234632a27d77ff7d2d5";
+/******/ 	var hotCurrentHash = "22fe6bdcc4b2e7cd13aa";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -259,7 +259,7 @@
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = "test";
+/******/ 			var chunkId = "home";
 /******/ 			// eslint-disable-next-line no-lone-blocks
 /******/ 			{
 /******/ 				/*globals chunkId */
@@ -789,19 +789,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire("./src/js/test.js")(__webpack_require__.s = "./src/js/test.js");
+/******/ 	return hotCreateRequire("./src/page/home/index.js")(__webpack_require__.s = "./src/page/home/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/test.js":
-/*!************************!*\
-  !*** ./src/js/test.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./src/page/home/index.js":
+/*!********************************!*\
+  !*** ./src/page/home/index.js ***!
+  \********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("console.log(\"test js\")\n\n//# sourceURL=webpack:///./src/js/test.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _public_js_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/js/module */ \"./src/public/js/module.js\");\n\nclass Index {\n  constructor() {\n    console.log(\"home page\");\n    Object(_public_js_module__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  }\n}\nnew Index();\n\n\n//# sourceURL=webpack:///./src/page/home/index.js?");
+
+/***/ }),
+
+/***/ "./src/public/js/module.js":
+/*!*********************************!*\
+  !*** ./src/public/js/module.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function() {\n    console.log(\"module js ------\")\n});\n\n//# sourceURL=webpack:///./src/public/js/module.js?");
 
 /***/ })
 

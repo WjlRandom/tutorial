@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "9234632a27d77ff7d2d5";
+/******/ 	var hotCurrentHash = "22fe6bdcc4b2e7cd13aa";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -259,7 +259,7 @@
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = "common";
+/******/ 			var chunkId = "about";
 /******/ 			// eslint-disable-next-line no-lone-blocks
 /******/ 			{
 /******/ 				/*globals chunkId */
@@ -789,20 +789,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire("./src/js/common.js")(__webpack_require__.s = "./src/js/common.js");
+/******/ 	return hotCreateRequire("./src/page/about/index.js")(__webpack_require__.s = "./src/page/about/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/common.js":
-/*!**************************!*\
-  !*** ./src/js/common.js ***!
-  \**************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/page/about/index.js":
+/*!*********************************!*\
+  !*** ./src/page/about/index.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function() {\n    console.log(\"weijinlong-111111111\")\n});\n\n//# sourceURL=webpack:///./src/js/common.js?");
+eval("console.log(\"about\");\n\n\n//# sourceURL=webpack:///./src/page/about/index.js?");
 
 /***/ })
 
