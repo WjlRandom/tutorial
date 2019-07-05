@@ -1,0 +1,7 @@
+@import "../../common/vendor.wxss";
+
+.link-btn.data-v-8c87025a {
+  margin-top: 200rpx;
+  background: #cb3129;
+  color: #fff;
+}

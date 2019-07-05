@@ -1,3 +1,5 @@
+<!-- 共享项目 -->
+
 ##关于本项目的说明
 ###1 技术栈：webpack-dev-server+webpack+ejs+zepto
 

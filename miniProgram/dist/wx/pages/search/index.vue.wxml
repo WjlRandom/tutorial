@@ -1,0 +1,11 @@
+<import src="/components/productList.vue.wxml" />
+<import src="/components/loadMore.vue.wxml" />
+<import src="/components/dataNull.vue.wxml" />
+<import src="/components/showModal.vue.wxml" /><template name="04fc7617">
+  <view class="_div data-v-fa6d692c search-page">
+    <view class="_div data-v-fa6d692c search-top"><input value="{{searchConfig.search}}" bindinput="handleProxy" type="text" class="_input data-v-fa6d692c search-input" placeholder="请输入你感兴趣的群" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
+      <view class="_div data-v-fa6d692c search-btn" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">确定</view>
+    </view>
+    <view class="_div data-v-fa6d692c search-list"><template bindoperateItem="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'0'], $root}}" is="3da01596"></template></view> <template wx:if="{{isMore}}" bindloadMore="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'1'], $root}}" is="4e2674fa"></template> <template wx:if="{{isDataNull}}" data="{{...$root[$kk+'2'], $root}}" is="76f00d79"></template> <template wx:if="{{isShowModal}}" bindcloseModal="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'3'], $root}}" is="1b8dc990"></template>
+  </view>
+</template>

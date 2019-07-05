@@ -1,0 +1,45 @@
+<import src="/components/swiper.vue.wxml" />
+<import src="/components/productList.vue.wxml" />
+<import src="/components/loadMore.vue.wxml" />
+<import src="/components/dataNull.vue.wxml" />
+<import src="/components/showModal.vue.wxml" /><template name="2853db99">
+  <view class="_div data-v-d084e034 container">
+    <view class="_div data-v-d084e034 banner"><template bindlinkToDetail="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'0'], $root}}" is="c504ebc0"></template></view>
+    <view id="filter" class="_div data-v-d084e034 {{['filter', isMenuFixed ? 'fixed' : '']}}">
+      <view class="_div data-v-d084e034 filter-link">
+        <view class="_div data-v-d084e034 filter-item" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">选地区</view>
+        <view class="_div data-v-d084e034 filter-item" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">选主题</view>
+        <view class="_div data-v-d084e034 filter-item" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">选车型</view>
+      </view>
+      <view class="_div data-v-d084e034 filter-selected" wx:if="{{reset}}">
+        <view class="_div data-v-d084e034 selected-item" wx:if="{{selectedItems.cityName}}">{{selectedItems.cityName}}</view>
+        <view class="_div data-v-d084e034 selected-item" wx:if="{{selectedItems.subjectName}}">{{selectedItems.subjectName}}</view>
+        <view class="_div data-v-d084e034 selected-item" wx:if="{{selectedItems.genreName}}">{{selectedItems.genreName}}</view>
+        <view class="_div data-v-d084e034 selected-reset" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">重置</view>
+      </view>
+    </view>
+    <view class="_div data-v-d084e034 product-list"><template bindoperateItem="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'1'], $root}}" is="3da01596"></template></view> <template wx:if="{{isMore}}" bindloadMore="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'2'], $root}}" is="4e2674fa"></template>
+    <view class="_div data-v-d084e034 filter-box" wx:if="{{filterBoxShow}}" catchtouchmove="preventTouchMove">
+      <view class="_div data-v-d084e034 filter-box-top">
+        <view class="_div data-v-d084e034 filter-box-close" bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}">关闭</view>
+        <view class="_div data-v-d084e034 filter-link">
+          <view bindtap="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_div data-v-d084e034 {{['filter-item', currentTab == 1 ? 'activeTab' : '']}}">选地区</view>
+          <view bindtap="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}" class="_div data-v-d084e034 {{['filter-item', currentTab == 2 ? 'activeTab' : '']}}">选主题</view>
+          <view bindtap="handleProxy" data-eventid="{{'10'}}" data-comkey="{{$k}}" class="_div data-v-d084e034 {{['filter-item', currentTab == 3 ? 'activeTab' : '']}}">选车型</view>
+        </view>
+      </view>
+      <view class="_div data-v-d084e034 filter-box-main">
+        <view wx:key="index" key="{{index}}" wx:for="{{regionList}}" wx:for-index="index" wx:for-item="item" class="_ul data-v-d084e034 {{['box-list', currentTab == 1 ? 'show' : 'hidden']}}">
+          <view class="_li data-v-d084e034 box-list-item" bindtap="handleProxy" data-eventid="{{'11_'+index}}" data-comkey="{{$k}}">{{item.regionName}}</view>
+        </view>
+        <view wx:key="index" key="{{index}}" wx:for="{{subjectList}}" wx:for-index="index" wx:for-item="item" class="_ul data-v-d084e034 {{['box-list', currentTab == 2 ? 'show' : 'hidden']}}">
+          <view class="_li data-v-d084e034 box-list-item" bindtap="handleProxy" data-eventid="{{'12_'+index}}" data-comkey="{{$k}}">{{item.subName}}</view>
+        </view>
+        <view wx:key="index" key="{{index}}" wx:for="{{typeList}}" wx:for-index="index" wx:for-item="item" class="_ul data-v-d084e034 {{['box-list', currentTab == 3 ? 'show' : 'hidden']}}">
+          <view class="_li data-v-d084e034 box-list-item" bindtap="handleProxy" data-eventid="{{'13_'+index}}" data-comkey="{{$k}}">{{item.genreName}}</view>
+        </view>
+      </view>
+    </view>
+    <navigator url="/pages/search/main" wx:if="{{isShowSearchBtn}}" open-type="switchTab" class="_a data-v-d084e034 search-link">搜索</navigator> <template wx:if="{{isDataNull}}" data="{{...$root[$kk+'3'], $root}}" is="76f00d79"></template> <template wx:if="{{isShowModal}}" bindcloseModal="handleProxy" data-eventid="{{'14'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'4'], $root}}" is="1b8dc990"></template>
+  </view>
+</template>

@@ -1,0 +1,3 @@
+<template name="3befa980">
+  <view class="_div data-v-8c87025a container"><button class="_button data-v-8c87025a link-btn" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">进入商城</button></view>
+</template>

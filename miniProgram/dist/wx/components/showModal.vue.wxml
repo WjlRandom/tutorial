@@ -1,0 +1,13 @@
+<template name="1b8dc990">
+  <view class="_div data-v-3025e7cb modal" catchtouchmove="preventTouchMove">
+    <view class="_div data-v-3025e7cb modal-inner">
+      <view class="_div data-v-3025e7cb modal-top">{{modalData.title}}</view>
+      <view class="_div data-v-3025e7cb modal-content"><button class="_button data-v-3025e7cb join-btn" open-type="contact" session-from="{{modalData.id}}">加入社群</button>
+        <view class="_div data-v-3025e7cb tip">{{modalData.tip}}</view>
+      </view>
+      <view class="_div data-v-3025e7cb modal-bottom">
+        <view class="_div data-v-3025e7cb cancel" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">取消</view>
+      </view>
+    </view>
+  </view>
+</template>

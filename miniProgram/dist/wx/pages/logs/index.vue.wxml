@@ -1,0 +1,10 @@
+<import src="/components/card.vue.wxml" /><template name="2c347e5e">
+  <view class="_div data-v-2fcc8c71">
+    <view class="_ul data-v-2fcc8c71 container log-list">
+      <view wx:key="index" key="{{index}}" class="_li data-v-2fcc8c71 log-item {{[aa ? 'red' : '']}}" wx:for="{{logs}}" wx:for-index="index" wx:for-item="log"><template data="{{...$root[$kk+'0_'+index], $root}}" is="3784d4b8"></template></view>
+    </view>
+    <view class="_div data-v-2fcc8c71"><button class="_button data-v-2fcc8c71 btn" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">显示</button>
+      <modal hidden="{{hiddenmodalput}}" title="完善资料" confirm-text="提交" cancel-text="取消" bindcancel="cancelM" bindconfirm="confirmM" class="_modal data-v-2fcc8c71"><input bindinput="iName" type="text" placeholder="请输入姓名..." auto-focus class="_input data-v-2fcc8c71" /> <input bindinput="iPhoneNum" type="number" placeholder="请输入手机号码..." class="_input data-v-2fcc8c71" /></modal>
+    </view>
+  </view>
+</template>

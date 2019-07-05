@@ -1,0 +1,16 @@
+<template name="11529706">
+  <view class="_div data-v-fe87695a tabbar">
+    <view class="_div data-v-fe87695a tabbar-item" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+      <image class="_img data-v-fe87695a icon" src="/static/images/icon-1.png" alt></image>
+      <view class="_p data-v-fe87695a text">首页</view>
+    </view>
+    <view class="_div data-v-fe87695a tabbar-item" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+      <image class="_img data-v-fe87695a icon" src="/static/images/icon-3.png" alt></image>
+      <view class="_p data-v-fe87695a text">搜索</view>
+    </view>
+    <view class="_div data-v-fe87695a tabbar-item" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+      <image class="_img data-v-fe87695a icon" src="/static/images/icon-5.png" alt></image>
+      <view class="_p data-v-fe87695a text">商城</view>
+    </view>
+  </view>
+</template>

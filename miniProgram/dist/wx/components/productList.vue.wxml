@@ -1,0 +1,14 @@
+<template name="3da01596">
+  <view class="_div data-v-571be908 products">
+    <view class="_div data-v-571be908 product-item" wx:key="index" key="{{index}}" wx:for="{{products}}" wx:for-index="index" wx:for-item="item">
+      <view class="_div data-v-571be908 item-left">
+        <image class="_img data-v-571be908 img" src="{{item.headImage}}" alt></image>
+      </view>
+      <view class="_div data-v-571be908 item-center">
+        <view class="_p data-v-571be908 center-title">{{item.mainTitle}}</view>
+        <view class="_p data-v-571be908 center-msg">{{item.subTitle}}</view>
+      </view>
+      <view class="_div data-v-571be908 item-right"><button class="_button data-v-571be908 join-btn" open-type="contact" session-from="{{item.id}}">+加群</button></view>
+    </view>
+  </view>
+</template>

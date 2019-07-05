@@ -1,0 +1,16 @@
+<import src="/components/productList.vue.wxml" />
+<import src="/components/loadMore.vue.wxml" />
+<import src="/components/dataNull.vue.wxml" />
+<import src="/components/showModal.vue.wxml" />
+<import src="/components/card.vue.wxml" />
+<import src="/components/swiper.vue.wxml" />
+<import src="/components/productList.vue.wxml" />
+<import src="/components/loadMore.vue.wxml" />
+<import src="/components/tabbar.vue.wxml" />
+<import src="/components/dataNull.vue.wxml" />
+<import src="/components/showModal.vue.wxml" />
+<import src="/components/swiper.vue.wxml" />
+<import src="/components/productList.vue.wxml" />
+<import src="/components/loadMore.vue.wxml" />
+<import src="/components/dataNull.vue.wxml" />
+<import src="/components/showModal.vue.wxml" />

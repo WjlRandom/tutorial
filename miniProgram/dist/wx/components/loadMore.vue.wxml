@@ -1,0 +1,5 @@
+<template name="4e2674fa">
+  <view class="_div data-v-14ba9a90 more-link">
+    <view class="_div data-v-14ba9a90 more-link-btn" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">查看更多</view>
+  </view>
+</template>
