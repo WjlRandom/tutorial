@@ -1,0 +1,45 @@
+@import "../../public/stylesheets/common.less";
+@rem: 75rem;
+body {
+  background: #fff;
+  .member-list {
+    .list-title {
+      display: flex;
+      width: 100%;
+      background: url(http://imgtj.sumeiliti.com/bg-1.png) no-repeat center;
+      background-size: 100%;
+      position: relative;
+      p {
+        flex: 1;
+        font-weight: bold;
+        color: #fff;
+        font-size: 34 / @rem;
+        padding-left: 12 / @rem;
+        height: 122 / @rem;
+        line-height: 122 / @rem;
+        text-align: center;
+        .name {
+          margin-right: 22 / @rem;
+        }
+        .status {
+          margin-left: 10 / @rem;
+          display: inline-block;
+          width: 32 / @rem;
+          height: 32 / @rem;
+          background: url(/public/images/goods.png) no-repeat center;
+          background-size: 32 / @rem;
+          vertical-align: middle;
+          margin-top: -4 / @rem;
+        }
+        .phone {
+          margin-left: 14 / @rem;
+        }
+      }
+    }
+    .more-link {
+      text-align: center;
+      color: #f85f48;
+      padding: 20 / @rem;
+    }
+  }
+}

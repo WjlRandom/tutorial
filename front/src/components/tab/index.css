@@ -1,0 +1,20 @@
+.tab-wrap {
+  background: #fff;
+  border: 2px solid #f85f48;
+  border-radius: 0.21333333rem;
+  display: flex;
+  overflow: hidden;
+}
+.tab-wrap .tab-item {
+  width: 50%;
+  text-align: center;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  font-family: "PingFangSC-Medium";
+  font-size: 0.48rem;
+  color: #f85f48;
+}
+.tab-wrap .tab-active {
+  background: #f85f48;
+  color: #fff;
+}

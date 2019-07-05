@@ -1,0 +1,147 @@
+@rem: 75rem;
+html,
+body,
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+}
+
+body {
+  font: 14px "PingFangSC-Regular Microsoft Yahei", Helvetica, Arial;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+
+i {
+  font-style: normal;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="phone"],
+input[type="password"] {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+  font-family: "PingFangSC-Regular";
+  font-size: 16px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  width: 0;
+  height: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.toast {
+  position: fixed;
+  z-index: 999;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.btn-disabled {
+  background: #eee !important;
+  color: #fff !important;
+}
+
+// .common-btn {
+//   position: relative;
+//   .btn-img {
+//     width: 100%;
+//     height: auto;
+//   }
+//   .btn-text {
+//     width: 100%;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     bottom: 0;
+//     text-align: center;
+//     color: #fff;
+//     font-family: "PingFangSC-Regular";
+//     font-size: 36 / @rem;
+//     line-height: 100 / @rem;
+//   }
+// }
+.common-btn {
+  margin: 0 30 / @rem;
+  height: 118 / @rem;
+  background: url(//imgtj.sumeiliti.com/btn-bg.png) no-repeat top center
+    rgba(0, 0, 0, 0);
+  background-size: 100% auto;
+  margin-top: 40 / @rem;
+  line-height: 100 / @rem;
+  text-align: center;
+  color: #fff;
+  font-family: "PingFangSC-Regular";
+  font-size: 36 / @rem;
+  outline: none;
+  appearance: none;
+}
+.data-null {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  img {
+    width: 100 / @rem;
+    height: auto;
+  }
+  p {
+    color: #aaa;
+    padding: 10 / @rem;
+  }
+}
+.loading {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background: #fff;
+  // display: none;
+  color: #ccc;
+  text-align: center;
+  line-height: 200 / @rem;
+}

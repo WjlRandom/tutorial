@@ -1,0 +1,26 @@
+<div class="membership">
+    <div class="membership-top">
+        <p class="member-total-title">总会员人数</p>
+        <p class="member-total-num"><span><%=data.totalPersonNumber%></span>人</p>
+        <p class="member-normal-num">普通会员：<span><%=data.notSellProductsPersonNumber%>人</span></p>
+        <p class="member-special-num">带货会员：<span><%=data.isSellProductsPersonNumber%>人</span></p>
+    </div>
+    <div class="membership-main">
+        <%data.personCardTypeBoList.forEach(function(item){%>
+            <div class="membership-item">
+                <div class="membership-item-left">
+                    <img src="<%=item.cardPreviewImage%>" alt="">
+                </div>
+                <div class="membership-item-right">
+                    <p>
+                        <span><%=item.cardTypeName%></span><span>会员<%=item.totalPersonNumber%>人</span>
+                    </p>
+                    <p>
+                        <span>带货<%=item.isSellProductsPersonNumber%>人</span>
+                        <span>普通<%=item.notSellProductsPersonNumber%>人</span>
+                    </p>
+                </div>
+            </div>
+            <%})%>
+    </div>
+</div>

@@ -1,0 +1,200 @@
+@import "../../public/stylesheets/common.less";
+@rem: 75rem;
+body {
+  //background:#eaeaea;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  .income {
+    background: #ffb4b9;
+    padding: 20 / @rem 0;
+    display: flex;
+    .income-left {
+      padding: 0 50 / @rem;
+      .profile-link {
+        cursor: pointer;
+        img {
+          display: block;
+          width: 126 / @rem;
+          height: 122 / @rem;
+        }
+      }
+    }
+    .income-right {
+      display: flex;
+      .income-right-item {
+        flex: 1;
+        margin: 20 / @rem 0;
+        p:nth-of-type(1) {
+          font-family: "PingFangSC-Regular";
+          font-size: 24 / @rem;
+          color: #fff;
+          // margin-top:20/@rem;
+          // margin-bottom:10/@rem;
+        }
+        p:nth-of-type(2) {
+          font-family: "PingFangSC-Simbold";
+          font-size: 30 / @rem;
+          color: #fff;
+          text-align: center;
+        }
+      }
+      .income-today {
+        padding-right: 90 / @rem;
+        border-right: 1px solid #fff;
+      }
+      .income-total {
+        padding-left: 90 / @rem;
+      }
+    }
+  }
+  .card-info {
+    background: #eaeaea;
+    height: 48 / @rem;
+    line-height: 48 / @rem;
+    .card-type {
+      margin-left: 50 / @rem;
+      font-family: "PingFangSC-Medium";
+      font-size: 24 / @rem;
+      color: #666;
+      float: left;
+    }
+    .card-status {
+      float: left;
+      margin-left: 14 / @rem;
+      width: 32 / @rem;
+      height: 100%;
+      display: inline-block;
+      background: url(/public/images/goods.png) no-repeat center;
+      background-size: 32 / @rem;
+    }
+    .card-date {
+      float: left;
+      font-family: "PingFangSC-Medium";
+      font-size: 24 / @rem;
+      color: #333;
+      margin-left: 28 / @rem;
+    }
+    .card-link {
+      float: right;
+      margin-right: 16px;
+      font-family: "PingFangSC-Medium";
+      font-size: 24 / @rem;
+      color: #f85f48;
+    }
+  }
+  .member-wrap {
+    background: #eee;
+  }
+}
+
+.list-wrap {
+  background: #fff;
+  margin-bottom: 10 / @rem;
+  .title {
+    padding: 20 / @rem;
+    text-align: center;
+    font-size: 32 / @rem;
+    font-family: "PingFangSC-Medium";
+  }
+  .list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 30 / @rem 10 / @rem;
+    a {
+      display: block;
+    }
+    li {
+      width: 48%;
+      margin-bottom: 10 / @rem;
+      img {
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+  }
+}
+.personal {
+  .list {
+    li {
+      // width:210/@rem;
+      width: 48%;
+      height: 140 / @rem;
+      margin-bottom: 10 / @rem;
+      p:nth-of-type(1) {
+        font-family: "PingFangSC-Medium";
+        font-weight: bold;
+        font-size: 36 / @rem;
+        text-align: center;
+        color: #f85f48;
+        margin-top: 24 / @rem;
+        margin-bottom: 8 / @rem;
+        .icon {
+          width: auto;
+          height: 40 / @rem;
+        }
+      }
+      p:nth-of-type(2) {
+        font-family: "PingFangSC-Regular";
+        font-size: 26 / @rem;
+        text-align: center;
+        color: #3f3f3f;
+        .icon {
+          width: auto;
+          height: 40 / @rem;
+        }
+      }
+    }
+  }
+  .personal-income {
+    background: #e8eaf5;
+  }
+  .personal-member {
+    background: #f5ebe8;
+  }
+  .personal-business {
+    background: #fae6ea;
+  }
+}
+.business {
+  .list {
+    li {
+      width: 150 / @rem;
+      height: 128 / @rem;
+      margin-bottom: 10 / @rem;
+      p:nth-of-type(1) {
+        text-align: center;
+        margin-top: 20 / @rem;
+        margin-bottom: 8 / @rem;
+        .icon {
+          width: 50 / @rem;
+          height: auto;
+        }
+      }
+      p:nth-of-type(2) {
+        font-family: "PingFangSC-Regular";
+        font-size: 26 / @rem;
+        text-align: center;
+        color: #3f3f3f;
+        .icon {
+          width: auto;
+          height: 40 / @rem;
+        }
+      }
+    }
+  }
+  .business-income {
+    background: #e4edf3;
+  }
+  .business-member {
+    background: #f3efe4;
+  }
+  .business-balance {
+    background: #f3e4f0;
+  }
+  .business-manage {
+    background: #e4f3ed;
+  }
+}

@@ -1,0 +1,30 @@
+<div class="panel-inner">
+    <ul class="panel-inner-item">
+        <%data.cardList.forEach(function(item){%>
+            <li>
+                <div>
+                    <p>
+                        <%=item.cardName%>
+                    </p>
+                    <p>
+                        <%=item.sumProfit%>
+                    </p>
+                </div>
+            </li>
+            <%})%>
+    </ul>
+    <ul class="panel-inner-item">
+        <%data.monthList.forEach(function(item){%>
+            <li>
+                <div>
+                    <p>
+                        <%=item.timeStr%>
+                    </p>
+                    <p>
+                        <%=item.profit%>
+                    </p>
+                </div>
+            </li>
+            <%})%>
+    </ul>
+</div>

@@ -1,0 +1,210 @@
+html,
+body,
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+}
+body {
+  font: 14px "PingFangSC-Regular Microsoft Yahei", Helvetica, Arial;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+i {
+  font-style: normal;
+}
+input[type="text"],
+input[type="number"],
+input[type="phone"],
+input[type="password"] {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+::-webkit-input-placeholder {
+  color: #999;
+  font-family: "PingFangSC-Regular";
+  font-size: 16px;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  width: 0;
+  height: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.toast {
+  position: fixed;
+  z-index: 999;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.btn-disabled {
+  background: #eee !important;
+  color: #fff !important;
+}
+.common-btn {
+  margin: 0 0.4rem;
+  height: 1.57333333rem;
+  background: url(//imgtj.sumeiliti.com/btn-bg.png) no-repeat top center rgba(0, 0, 0, 0);
+  background-size: 100% auto;
+  margin-top: 0.53333333rem;
+  line-height: 1.33333333rem;
+  text-align: center;
+  color: #fff;
+  font-family: "PingFangSC-Regular";
+  font-size: 0.48rem;
+  outline: none;
+  appearance: none;
+}
+.data-null {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.data-null img {
+  width: 1.33333333rem;
+  height: auto;
+}
+.data-null p {
+  color: #aaa;
+  padding: 0.13333333rem;
+}
+.loading {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background: #fff;
+  color: #ccc;
+  text-align: center;
+  line-height: 2.66666667rem;
+}
+body {
+  background: #eee;
+  line-height: 1;
+}
+body a {
+  display: block;
+}
+.container .income-top {
+  background: #fff;
+  padding: 0 0.4rem;
+  border-top: 1px solid #ddd;
+}
+.container .income-top .income-item {
+  padding: 0.4rem 0;
+  display: flex;
+}
+.container .income-top .income-item .income-item-inner {
+  width: 100%;
+  text-align: center;
+}
+.container .income-top .income-item .income-item-inner p:nth-of-type(1) {
+  font-family: "PingFangSC-Simbold";
+  font-size: 0.64rem;
+  color: #f85f48;
+  margin-bottom: 0.21333333rem;
+}
+.container .income-top .income-item .income-item-inner p:nth-of-type(2) {
+  font-family: "PingFangSC-Medium";
+  font-size: 0.34666667rem;
+  color: #333;
+}
+.container .income-top .income-item .income-item-inner:nth-of-type(2) {
+  position: relative;
+}
+.container .income-top .income-item .income-item-inner:nth-of-type(2) p:nth-of-type(1) .business-num {
+  display: inline-block;
+  padding-left: 0.66666667rem;
+  background: url("/public/images/personal-3.png") no-repeat 0 -0.02666667rem;
+  background-size: 0.61333333rem;
+}
+.container .income-top .income-item .income-item-inner:nth-of-type(2) .icon-arrow {
+  position: absolute;
+  display: inline-block;
+  width: 0.53333333rem;
+  height: 1.06666667rem;
+  right: 0;
+  top: 50%;
+  margin-top: -0.53333333rem;
+  background: url("/public/images/icon-arrow.png") no-repeat right center;
+  background-size: auto 0.4rem;
+}
+.container .income-top .income-top-card {
+  width: 100%;
+  padding: 0.48rem 0;
+  display: flex;
+  background: #eee;
+  border-radius: 0.16rem;
+}
+.container .income-top .income-top-card li {
+  width: 25%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.container .income-top .income-top-card li p:nth-of-type(1) {
+  font-family: "PingFangSC-Regular";
+  font-size: 0.37333333rem;
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+.container .income-top .income-top-card li p:nth-of-type(2) {
+  font-family: "PingFangSC-Simbold";
+  font-size: 0.48rem;
+  color: #f85f48;
+}
+.container .income-top .income-type {
+  margin-bottom: 0.4rem;
+}
+.container .income-top-panel {
+  background: #fff;
+  padding: 0 0.4rem 0.4rem;
+}
+.container .income-top-panel .panel-inner-item:nth-of-type(1) {
+  margin-top: 0 !important;
+  margin-bottom: 0.4rem;
+}
+.container .income-list-wrap {
+  padding: 0.26666667rem;
+}
+.container .more-link {
+  padding-bottom: 0.26666667rem;
+  color: #f85f48;
+  text-align: center;
+  display: none;
+}

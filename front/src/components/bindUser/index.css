@@ -1,0 +1,33 @@
+.bind-user .card-img {
+  background: #fff;
+  padding: 0.4rem;
+}
+.bind-user .card-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.bind-user .card-tip {
+  font-family: "PingFangSC-Simbold";
+  color: #333;
+  font-size: 0.42666667rem;
+  padding: 0.4rem;
+  line-height: 1.6;
+}
+.bind-user .card-form .card-form-tip {
+  font-family: "PingFangSC-Medium";
+  color: #666;
+  font-size: 0.42666667rem;
+  padding: 0 0.4rem 0.4rem;
+  line-height: 1.6;
+  background: #fff;
+  margin-bottom: 0.4rem;
+  text-align: center;
+}
+.bind-user .card-form .card-form-wrap {
+  background: #fff;
+  border-top: 1px solid #d8d8d8;
+}
+.bind-user .card-form .submit-btn {
+  margin: 0.64rem 0.32rem 0;
+}

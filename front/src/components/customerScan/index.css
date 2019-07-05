@@ -1,0 +1,54 @@
+body {
+  background: #eee;
+}
+.customer-scan .user-info {
+  background: #fff;
+  padding: 0.4rem;
+  display: flex;
+  margin-bottom: 0.26666667rem;
+}
+.customer-scan .user-info .user-info-left {
+  padding-right: 0.24rem;
+}
+.customer-scan .user-info .user-info-left img {
+  width: 1.54666667rem;
+  height: 1.54666667rem;
+}
+.customer-scan .user-info .user-info-right p:nth-of-type(1) {
+  font-family: "PingFangSC-Simbold";
+  font-size: 0.42666667rem;
+  color: #333;
+  margin-bottom: 0.13333333rem;
+  margin-top: 0.10666667rem;
+}
+.customer-scan .user-info .user-info-right p:nth-of-type(1) .user-name {
+  margin-right: 0.42666667rem;
+}
+.customer-scan .user-info .user-info-right p:nth-of-type(2) {
+  font-family: "PingFangSC-Light";
+  font-size: 0.42666667rem;
+  color: #333;
+}
+.customer-scan .user-code {
+  padding: 0.8rem 0 0.66666667rem;
+  background: #fff;
+}
+.customer-scan .user-code .user-code-title {
+  font-family: "PingFangSC-Simbold";
+  font-size: 0.42666667rem;
+  color: #333;
+  text-align: center;
+}
+.customer-scan .user-code .user-code-img {
+  width: 6.93333333rem;
+  height: 6.93333333rem;
+  display: block;
+  margin: 0.4rem auto 0;
+}
+.customer-scan .user-tip {
+  padding: 0.53333333rem 0;
+  font-family: "PingFangSC-Regular";
+  color: #333;
+  font-size: 0.48rem;
+  text-align: center;
+}

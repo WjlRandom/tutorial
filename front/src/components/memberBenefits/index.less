@@ -1,0 +1,75 @@
+@rem: 75rem;
+.benefit {
+  .benefit-title {
+    width: 190 / @rem;
+    font-family: "PingFangSC-Simbold";
+    color: #333;
+    font-size: 36 / @rem;
+    padding-top: 40 / @rem;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+  }
+  .benefit-title:after,
+  .benefit-title:before {
+    content: "";
+    display: block;
+    width: 70 / @rem;
+    height: 2 / @rem;
+    background: #333;
+    position: absolute;
+  }
+  .benefit-title:after {
+    left: 100%;
+    top: 58 / @rem;
+  }
+  .benefit-title:before {
+    left: -70 / @rem;
+    top: 58 / @rem;
+  }
+
+  .benefit-list {
+    padding: 30 / @rem;
+    .benefit-item {
+      font-family: "PingFangSC-Regular";
+      color: #333;
+      font-size: 30 / @rem;
+      line-height: 1.6;
+      .item-name {
+        font-weight: bold;
+      }
+    }
+  }
+  .card-img {
+    background: #fff;
+    padding: 30 / @rem;
+    img {
+      display: block;
+      width: 590 / @rem;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+  .card-content {
+    background: #fff;
+    padding: 10 / @rem 30 / @rem 50 / @rem;
+    font-family: "PingFangSC-Regular";
+    font-size: 28 / @rem;
+    color: #666;
+    p {
+      line-height: 1.6;
+      span {
+        color: #333;
+        font-weight: bold;
+      }
+    }
+  }
+  .card-tip {
+    font-family: "PingFangSC-Simbold";
+    color: #333;
+    font-size: 32 / @rem;
+    padding: 30 / @rem;
+    line-height: 1.6;
+  }
+}

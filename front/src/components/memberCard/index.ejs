@@ -1,0 +1,25 @@
+<div class="member-card">
+    <div class="card-img">
+        <img id="cardImg" src="<%=data.data.previewImage%>" alt="">
+    </div>
+    <div class="card-content">
+        <p>
+            <%=data.data.cardRemarks%>
+        </p>
+        <p><span>提示：</span>
+            <%=data.data.hint%>
+        </p>
+    </div>
+    <%if(data.code=="505"){%>
+        <div class="bind-user-form"></div>
+        <%}%>
+            <%if(data.code=="504"){%>
+                <div class="common-btn submit-link">提交</div>
+                <%}%>
+
+                    <%if(data.code=="200" || data.code=="507"){%>
+                        <div class="card-tip">
+                            <%=data.data.remarks%>
+                        </div>
+                        <%}%>
+</div>

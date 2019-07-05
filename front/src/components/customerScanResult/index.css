@@ -1,0 +1,16 @@
+body {
+  background: #fff;
+}
+.scan-pay .banner img {
+  width: 100%;
+}
+.scan-pay .tip {
+  padding: 0 0.4rem 0.4rem;
+  font-family: "PingFangSC-Regular";
+  color: #333;
+  font-size: 0.48rem;
+  text-align: center;
+}
+.scan-pay .tip p {
+  padding-top: 0.53333333rem;
+}

@@ -1,0 +1,16 @@
+<div class="product">
+    <div class="product-tip">您已经支付成功，恭喜您获得一次速美仁医新人特惠专享服务</div>
+    <div class="product-title"><span>以下项目中任选一项</span></div>
+    <ul class="product-list">
+        <!-- <li class="product-item product-item-top">
+            <span class="item-name">名称</span>
+            <span class="item-value">价值</span>
+        </li> -->
+        <%data.forEach(function(item){%>
+            <li class="product-item">
+                <span class="item-name"><%=item.name%></span>
+                <!-- <span class="item-value"><%=item.value%>元</span> -->
+            </li>
+            <%})%>
+    </ul>
+</div>

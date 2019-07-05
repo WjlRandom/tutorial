@@ -1,0 +1,108 @@
+@import "../../public/stylesheets/common.less";
+@rem: 75rem;
+body {
+  background: #eee;
+  line-height: 1;
+  a {
+    display: block;
+  }
+}
+.container {
+  .income-top {
+    background: #fff;
+    padding: 0 30 / @rem;
+    border-top: 1px solid #ddd;
+    .income-item {
+      padding: 30 / @rem 0;
+      display: flex;
+      .income-item-inner {
+        // width: 50%;
+        width: 100%;
+        text-align: center;
+        p:nth-of-type(1) {
+          font-family: "PingFangSC-Simbold";
+          font-size: 48 / @rem;
+          color: #f85f48;
+          margin-bottom: 16 / @rem;
+        }
+        p:nth-of-type(2) {
+          font-family: "PingFangSC-Medium";
+          font-size: 26 / @rem;
+          color: #333;
+        }
+      }
+      .income-item-inner:nth-of-type(1) {
+        //border-right: 1px solid #999;
+      }
+      .income-item-inner:nth-of-type(2) {
+        position: relative;
+        p:nth-of-type(1) {
+          .business-num {
+            display: inline-block;
+            padding-left: 50 / @rem;
+            background: url("/public/images/personal-3.png") no-repeat 0 -2 / @rem;
+            background-size: 46 / @rem;
+          }
+        }
+        .icon-arrow {
+          position: absolute;
+          display: inline-block;
+          width: 40 / @rem;
+          height: 80 / @rem;
+          right: 0;
+          top: 50%;
+          margin-top: -40 / @rem;
+          background: url("/public/images/icon-arrow.png") no-repeat right
+            center;
+          background-size: auto 30 / @rem;
+        }
+      }
+    }
+    .income-top-card {
+      width: 100%;
+      padding: 36 / @rem 0;
+      // height:165/@rem;
+      display: flex;
+      background: #eee;
+      border-radius: 12 / @rem;
+
+      li {
+        width: 25%;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        p:nth-of-type(1) {
+          font-family: "PingFangSC-Regular";
+          font-size: 28 / @rem;
+          color: #333;
+          margin-bottom: 30 / @rem;
+        }
+        p:nth-of-type(2) {
+          font-family: "PingFangSC-Simbold";
+          font-size: 36 / @rem;
+          color: #f85f48;
+        }
+      }
+    }
+    .income-type {
+      margin-bottom: 30 / @rem;
+    }
+  }
+  .income-top-panel {
+    background: #fff;
+    padding: 0 30 / @rem 30 / @rem;
+    .panel-inner-item:nth-of-type(1) {
+      margin-top: 0 !important;
+      margin-bottom: 30 / @rem;
+    }
+  }
+  .income-list-wrap {
+    padding: 20 / @rem;
+  }
+  .more-link {
+    padding-bottom: 20 / @rem;
+    color: #f85f48;
+    text-align: center;
+    display: none;
+  }
+}

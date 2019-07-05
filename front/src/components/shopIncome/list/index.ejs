@@ -1,0 +1,19 @@
+<%data.forEach(function(item){%>
+    <div class="list-item">
+        <div class="list-item-left">
+            <img src="<%=item.headImageUrl%>" alt="">
+        </div>
+        <div class="list-item-right">
+            <div>
+                <span class="name"><%=item.personName%></span>
+                <span class="type"><%=item.cardName%></span>
+                <!-- <i class="status"></i> -->
+                <span class="phone"><%=item.phoneNumber%></span>
+            </div>
+            <div>
+                <span class="date"><%=item.dateStr%></span>
+                <span class="sum">总收款：<%=item.profit%></span>
+            </div>
+        </div>
+    </div>
+    <%})%>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>立即体验,立即变美！</title>
+    <script src="../public/lib/rem.js"></script>
+</head>
+
+<body>
+    <div class="container" style="display: none;">
+        <div class="income">
+            <div class="income-left">
+                <div class="profile-link">
+                    <img id="profile" src="/public/images/profile.png" alt="">
+                </div>
+            </div>
+            <div class="income-right">
+                <div class="income-right-item income-today">
+                    <p>今日收入</p>
+                    <p id="todayIncome">0</p>
+                </div>
+                <div class="income-right-item income-total">
+                    <p>累计收入</p>
+                    <p id="sumIncome">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-info clearfix">
+            <span id="cardName" class="card-type">会员卡</span>
+            <span id="cardStatus" class="card-status"><i></i></span>
+            <span class="card-date">剩余<i id="cardDate">0</i>天</span>
+            <a class="card-link" href="./memberBenefits.html">点击查看会员特权 >></a>
+        </div>
+        <div class="member-wrap">
+            <div class="new-customer"></div>
+            <div class="member"></div>
+            <div id="personal" class="list-wrap personal" style="display: none;">
+                <p class="title">
+                    会员中心
+                </p>
+                <ul class="list">
+                    <li class="personal-income">
+                        <a href="./income.html">
+                            <p><img class="icon" src="../public/images/personal-1.png" alt=""><span id="income">1000</span></p>
+                            <p>我的收益</p>
+                        </a>
+                    </li>
+                    <li class="personal-member">
+                        <a href="./member.html">
+                            <p><img class="icon" src="../public/images/personal-2.png" alt=""><span id="subMember">100</span></p>
+                            <p>我的会员</p>
+                        </a>
+                    </li>
+                    <!-- <li class="personal-business">
+                        <p><img class="icon" src="/public/images/personal-3.png" alt=""><span>10000</span> </p>
+                        <p>潜在商机</p>
+                    </li> -->
+                </ul>
+            </div>
+            <div id="business" class="list-wrap business" style="display: none;">
+                <p class="title">
+                    商家中心
+                </p>
+                <ul class="list">
+                    <li class="business-income">
+                        <a href="./shopIncome.html">
+                            <p><img class="icon" src="../public/images/business-1.png" alt=""></p>
+                            <p>店铺收益</p>
+                        </a>
+                    </li>
+                    <li class="business-member">
+                        <a href="./confirmMember.html">
+                            <p><img class="icon" src="../public/images/business-2.png" alt=""></p>
+                            <p>会员确认</p>
+                        </a>
+                    </li>
+                    <li class="business-balance">
+                        <a href="./settleAccount.html">
+                            <p><img class="icon" src="../public/images/business-3.png" alt=""></p>
+                            <p>结算</p>
+                        </a>
+                    </li>
+                    <li class="business-manage">
+                        <a href="./membership.html">
+                            <p><img class="icon" src="../public/images/business-4.png" alt=""></p>
+                            <p>会员管理</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../public/lib/zepto.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script src="../dist/home/index.js "></script>
+
+</html>

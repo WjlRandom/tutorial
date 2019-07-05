@@ -1,0 +1,46 @@
+{
+  "name": "expressproject",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "dev": "webpack-dev-server",
+    "build": "webpack --config ./webpack.config.js"
+  },
+  "bin": {
+    "mycmd": "./bin/www"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.5",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "qiniu-js": "^2.5.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^1.0.1",
+    "ejs-loader": "^0.3.1",
+    "file-loader": "^2.0.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "nodemon": "^1.18.6",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-hot-middleware": "^2.24.3"
+  }
+}

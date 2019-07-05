@@ -1,0 +1,256 @@
+html,
+body,
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+}
+body {
+  font: 14px "PingFangSC-Regular Microsoft Yahei", Helvetica, Arial;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+i {
+  font-style: normal;
+}
+input[type="text"],
+input[type="number"],
+input[type="phone"],
+input[type="password"] {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+::-webkit-input-placeholder {
+  color: #999;
+  font-family: "PingFangSC-Regular";
+  font-size: 16px;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  width: 0;
+  height: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.toast {
+  position: absolute;
+  z-index: 999;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.btn-disabled {
+  background: #eee;
+  color: #fff;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.container .income {
+  background: #ffb4b9;
+  padding: 0.26666667rem 0;
+  display: flex;
+}
+.container .income .income-left {
+  padding: 0 0.66666667rem;
+}
+.container .income .income-left .profile-link {
+  cursor: pointer;
+}
+.container .income .income-left .profile-link img {
+  display: block;
+  width: 1.68rem;
+  height: 1.62666667rem;
+}
+.container .income .income-right {
+  display: flex;
+}
+.container .income .income-right .income-right-item {
+  flex: 1;
+  margin: 0.26666667rem 0;
+}
+.container .income .income-right .income-right-item p:nth-of-type(1) {
+  font-family: "PingFangSC-Regular";
+  font-size: 0.32rem;
+  color: #fff;
+}
+.container .income .income-right .income-right-item p:nth-of-type(2) {
+  font-family: "PingFangSC-Simbold";
+  font-size: 0.4rem;
+  color: #fff;
+  text-align: center;
+}
+.container .income .income-right .income-today {
+  padding-right: 1.2rem;
+  border-right: 1px solid #fff;
+}
+.container .income .income-right .income-total {
+  padding-left: 1.2rem;
+}
+.container .card-info {
+  background: #eaeaea;
+  height: 0.64rem;
+  line-height: 0.64rem;
+}
+.container .card-info .card-type {
+  margin-left: 0.66666667rem;
+  font-family: "PingFangSC-Medium";
+  font-size: 0.32rem;
+  color: #666;
+  float: left;
+}
+.container .card-info .card-status {
+  float: left;
+  margin-left: 0.18666667rem;
+  width: 0.42666667rem;
+  height: 100%;
+  display: inline-block;
+  background: url(/public/images/goods.png) no-repeat center;
+  background-size: 0.42666667rem;
+}
+.container .card-info .card-date {
+  float: left;
+  font-family: "PingFangSC-Medium";
+  font-size: 0.32rem;
+  color: #333;
+  margin-left: 0.37333333rem;
+}
+.container .card-info .card-link {
+  float: right;
+  margin-right: 16px;
+  font-family: "PingFangSC-Medium";
+  font-size: 0.32rem;
+  color: #f85f48;
+}
+.container .member-wrap {
+  background: #eee;
+}
+.list-wrap {
+  background: #fff;
+  margin-bottom: 0.13333333rem;
+}
+.list-wrap .title {
+  padding: 0.26666667rem;
+  text-align: center;
+  font-size: 0.42666667rem;
+  font-family: "PingFangSC-Medium";
+}
+.list-wrap .list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 0.4rem 0.13333333rem;
+}
+.list-wrap .list a {
+  display: block;
+}
+.list-wrap .list li {
+  width: 48%;
+  margin-bottom: 0.13333333rem;
+}
+.list-wrap .list li img {
+  width: 100%;
+  vertical-align: top;
+}
+.personal .list li {
+  width: 48%;
+  height: 1.86666667rem;
+  margin-bottom: 0.13333333rem;
+}
+.personal .list li p:nth-of-type(1) {
+  font-family: "PingFangSC-Medium";
+  font-weight: bold;
+  font-size: 0.48rem;
+  text-align: center;
+  color: #f85f48;
+  margin-top: 0.32rem;
+  margin-bottom: 0.10666667rem;
+}
+.personal .list li p:nth-of-type(1) .icon {
+  width: auto;
+  height: 0.53333333rem;
+}
+.personal .list li p:nth-of-type(2) {
+  font-family: "PingFangSC-Regular";
+  font-size: 0.34666667rem;
+  text-align: center;
+  color: #3f3f3f;
+}
+.personal .list li p:nth-of-type(2) .icon {
+  width: auto;
+  height: 0.53333333rem;
+}
+.personal .personal-income {
+  background: #e8eaf5;
+}
+.personal .personal-member {
+  background: #f5ebe8;
+}
+.personal .personal-business {
+  background: #fae6ea;
+}
+.business .list li {
+  width: 2rem;
+  height: 1.70666667rem;
+  margin-bottom: 0.13333333rem;
+}
+.business .list li p:nth-of-type(1) {
+  text-align: center;
+  margin-top: 0.26666667rem;
+  margin-bottom: 0.10666667rem;
+}
+.business .list li p:nth-of-type(1) .icon {
+  width: 0.66666667rem;
+  height: auto;
+}
+.business .list li p:nth-of-type(2) {
+  font-family: "PingFangSC-Regular";
+  font-size: 0.34666667rem;
+  text-align: center;
+  color: #3f3f3f;
+}
+.business .list li p:nth-of-type(2) .icon {
+  width: auto;
+  height: 0.53333333rem;
+}
+.business .business-income {
+  background: #e4edf3;
+}
+.business .business-member {
+  background: #f3efe4;
+}
+.business .business-balance {
+  background: #f3e4f0;
+}
+.business .business-manage {
+  background: #e4f3ed;
+}

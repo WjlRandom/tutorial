@@ -1,0 +1,36 @@
+<div class="panel-inner">
+    <%if(data.type==1){%>
+        <%if(data.earningsCardTypeList && data.earningsCardTypeList.length>0){%>
+            <ul class="panel-inner-item">
+                <%data.earningsCardTypeList.forEach(function(item){%>
+                    <li>
+                        <div>
+                            <p>
+                                <%=item.cardTypeName%>
+                            </p>
+                            <p>
+                                <%=item.earnings?item.earnings:0%>
+                            </p>
+                        </div>
+                    </li>
+                    <%})%>
+            </ul>
+            <%}%>
+                <%}%>
+                    <ul class="panel-inner-item">
+                        <li>
+                            <div>
+                                <p>本月收益</p>
+                                <p>
+                                    <%=data.nowMonthProfit?data.nowMonthProfit:0%>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <p>累计收益</p>
+                            <p>
+                                <%=data.allProfit?data.allProfit:0%>
+                            </p>
+                        </li>
+                    </ul>
+</div>

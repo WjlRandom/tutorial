@@ -1,0 +1,28 @@
+<%data.list.forEach(function(item){%>
+    <div class="list-item">
+        <div class="list-item-left">
+            <img src="<%=item.headImageUrl%>" alt="">
+        </div>
+        <div class="list-item-right">
+            <div>
+                <span class="name"><%=item.personName%></span><span class="type"><%=item.cardName%></span>
+                <%if(item.isSellProducts==1){%>
+                    <i class="status"></i>
+                    <%}%>
+                        <span class="phone"><%=item.phoneNumber%></span>
+            </div>
+            <div>
+                <span class="date"><%=item.dateStr%></span>
+            </div>
+        </div>
+        <div class="list-item-middle">
+            <p>推荐人：<span class="sup-name"><%=item.superiorName%></span><span><%=item.superiorPhoneNumber%></span></p>
+            <p>账单：<span><%=item.earnings%>元</span></p>
+        </div>
+        <%if(data.type=="0"){%>
+            <div class="list-item-bottom">
+                <button class="confirm-btn" id="<%=item.earningsId%>">结算</button>
+            </div>
+            <%}%>
+    </div>
+    <%})%>

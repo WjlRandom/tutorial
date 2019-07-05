@@ -1,0 +1,56 @@
+.register-form {
+  padding-top: 0.4rem;
+}
+.register-form .form-main {
+  background: #fff;
+}
+.register-form .form-item {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #d8d8d8;
+  margin-left: 0.4rem;
+  font-size: 0.42666667rem;
+  font-family: "PingFangSC-Regular";
+  padding-right: 0.4rem;
+  display: flex;
+}
+.register-form .form-item .item-left {
+  display: inline-block;
+  min-width: 2.4rem;
+  padding-top: 2px;
+}
+.register-form .form-item input {
+  font-size: 0.42666667rem;
+  color: #000;
+}
+.register-form .form-item .code-input {
+  display: inline-block;
+  min-width: 3.2rem;
+}
+.register-form .code-item {
+  border-bottom: none;
+  box-sizing: border-box;
+  padding-right: 2.93333333rem;
+  position: relative;
+}
+.register-form .code-item .code-btn {
+  border: none;
+  width: 2.4rem;
+  height: 0.8rem;
+  color: #fff;
+  background: #ffb4b9;
+  font-size: 0.42666667rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  margin-top: -0.4rem;
+  border-radius: 4px;
+}
+.register-form .form-submit {
+  background: #eee;
+  border-top: 1px solid #d8d8d8;
+  padding-top: 0.64rem;
+  text-align: center;
+}
+.register-form .form-submit .submit-btn {
+  margin: 0 0.4rem;
+}

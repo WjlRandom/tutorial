@@ -1,0 +1,40 @@
+.member-list {
+  padding: 0.26666667rem 0.26666667rem 0;
+}
+.member-list .title {
+  display: flex;
+  width: 100%;
+  background: url(http://imgtj.sumeiliti.com/bg-1.png) no-repeat center;
+  background-size: 100%;
+  position: relative;
+}
+.member-list .title p {
+  flex: 1;
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.45333333rem;
+  padding-left: 0.16rem;
+  height: 1.62666667rem;
+  line-height: 1.62666667rem;
+}
+.member-list .title .icon {
+  display: inline-block;
+  width: 0.37333333rem;
+  height: 0.53333333rem;
+  position: absolute;
+  padding: 0 0.16rem;
+  right: 0;
+  top: 50%;
+  margin-top: -0.26666667rem;
+  background: url(http://imgtj.sumeiliti.com/icon-arrow2.png) no-repeat center;
+  background-size: 0.21333333rem auto;
+}
+.member-list .title .icon-down {
+  background: url(http://imgtj.sumeiliti.com/icon-arrow1.png) no-repeat center;
+  background-size: auto 0.21333333rem;
+}
+.member-list .list {
+  height: 0;
+  transition: all 1s;
+  overflow: hidden;
+}

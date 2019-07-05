@@ -1,0 +1,68 @@
+.list-item {
+  background: #eaeaea;
+  padding: 0.26666667rem 0;
+  display: flex;
+  border-radius: 0.16rem;
+  margin-top: 0.26666667rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+.list-item .list-item-left {
+  padding-left: 0.13333333rem;
+  padding-right: 0.16rem;
+}
+.list-item .list-item-left img {
+  width: 1.65333333rem;
+  height: 1.65333333rem;
+  display: block;
+  border-radius: 0.10666667rem;
+}
+.list-item .list-item-right > div:nth-of-type(1) {
+  font-family: "PingFangSC-Medium";
+  font-size: 0.42666667rem;
+  color: #333;
+  margin-bottom: 0.13333333rem;
+  margin-top: 0.18666667rem;
+}
+.list-item .list-item-right > div:nth-of-type(1) .name {
+  margin-right: 0.29333333rem;
+}
+.list-item .list-item-right > div:nth-of-type(1) .status {
+  margin-left: 0.13333333rem;
+  display: inline-block;
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  background: url(/public/images/goods.png) no-repeat center;
+  background-size: 0.42666667rem;
+  vertical-align: middle;
+  margin-top: -0.05333333rem;
+}
+.list-item .list-item-right > div:nth-of-type(1) .phone {
+  margin-left: 0.18666667rem;
+}
+.list-item .list-item-right > div:nth-of-type(2) {
+  font-size: 0.42666667rem;
+  color: #666;
+  font-family: "PingFangSC-Medium";
+}
+.list-item .list-item-right > div:nth-of-type(2) .date {
+  margin-right: 0.48rem;
+}
+.list-item .list-item-right > div:nth-of-type(2) .verify {
+  color: #f85f48;
+}
+.list-item .list-item-icon {
+  width: 0.37333333rem;
+  height: 0.53333333rem;
+  position: absolute;
+  padding: 0 0.16rem;
+  right: 0;
+  top: 50%;
+  margin-top: -0.26666667rem;
+  text-align: center;
+}
+.list-item .list-item-icon .icon-img {
+  width: 0.21333333rem;
+  height: auto;
+  margin-top: 0.08rem;
+}

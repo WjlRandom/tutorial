@@ -1,0 +1,128 @@
+html,
+body,
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+}
+body {
+  font: 14px "PingFangSC-Regular Microsoft Yahei", Helvetica, Arial;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+i {
+  font-style: normal;
+}
+input[type="text"],
+input[type="number"],
+input[type="phone"],
+input[type="password"] {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+::-webkit-input-placeholder {
+  color: #999;
+  font-family: "PingFangSC-Regular";
+  font-size: 16px;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  width: 0;
+  height: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.toast {
+  position: absolute;
+  z-index: 999;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.btn-disabled {
+  background: #eee;
+  color: #fff;
+}
+.common-btn {
+  margin: 0 0.4rem;
+  height: 1.57333333rem;
+  background: url(/public/images/btn-bg.png) no-repeat top center rgba(0, 0, 0, 0);
+  background-size: 100% auto;
+  margin-top: 0.53333333rem;
+  line-height: 1.33333333rem;
+  text-align: center;
+  color: #fff;
+  font-family: "PingFangSC-Regular";
+  font-size: 0.48rem;
+  outline: none;
+  appearance: none;
+}
+body {
+  background: #fff;
+}
+body .member-list .list-title {
+  display: flex;
+  width: 100%;
+  background: url(http://imgtj.sumeiliti.com/bg-1.png) no-repeat center;
+  background-size: 100%;
+  position: relative;
+}
+body .member-list .list-title p {
+  flex: 1;
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.45333333rem;
+  padding-left: 0.16rem;
+  height: 1.62666667rem;
+  line-height: 1.62666667rem;
+  text-align: center;
+}
+body .member-list .list-title p .name {
+  margin-right: 0.29333333rem;
+}
+body .member-list .list-title p .status {
+  margin-left: 0.13333333rem;
+  display: inline-block;
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  background: url(/public/images/goods.png) no-repeat center;
+  background-size: 0.42666667rem;
+  vertical-align: middle;
+  margin-top: -0.05333333rem;
+}
+body .member-list .list-title p .phone {
+  margin-left: 0.18666667rem;
+}
+body .member-list .more-link {
+  text-align: center;
+  color: #f85f48;
+  padding: 0.26666667rem;
+}

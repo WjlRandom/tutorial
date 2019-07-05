@@ -1,0 +1,15 @@
+<div class="member-wrap">
+    <%data.forEach(function(item){%>
+        <div class="member-list">
+            <div class="title">
+                <p>
+                    <%=item.cardTypeName%>：<span><%=item.totalPersonNumber%>人(带货<%=item.isSellProductsPersonNumber%>人，普通<%=item.notSellProductsPersonNumber%>人)</span>
+                </p>
+                <span class="icon"></span>
+            </div>
+            <div class="list">
+
+            </div>
+        </div>
+        <%})%>
+</div>

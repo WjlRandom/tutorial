@@ -1,0 +1,37 @@
+body {
+  background: #fff;
+}
+.container .user {
+  background: #eee;
+  padding-bottom: 0.26666667rem;
+}
+.container .user .user-info {
+  background: #fff;
+  padding: 0.4rem;
+  display: flex;
+}
+.container .user .user-info .user-info-left {
+  padding-right: 0.24rem;
+}
+.container .user .user-info .user-info-left img {
+  width: 1.54666667rem;
+  height: 1.54666667rem;
+}
+.container .user .user-info .user-info-right p:nth-of-type(1) {
+  font-family: "PingFangSC-Simbold";
+  font-size: 0.42666667rem;
+  color: #333;
+  margin-bottom: 0.13333333rem;
+  margin-top: 0.10666667rem;
+}
+.container .user .user-info .user-info-right p:nth-of-type(1) .user-name {
+  margin-right: 0.42666667rem;
+}
+.container .user .user-info .user-info-right p:nth-of-type(2) {
+  font-family: "PingFangSC-Light";
+  font-size: 0.42666667rem;
+  color: #333;
+}
+.container .confirm-btn {
+  padding: 1.06666667rem 0 0.4rem;
+}

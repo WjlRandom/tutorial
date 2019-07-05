@@ -1,0 +1,16 @@
+.activity-inner .card-img {
+  background: #fff;
+  padding: 0.4rem;
+}
+.activity-inner .card-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.activity-inner .card-tip {
+  font-family: "PingFangSC-Simbold";
+  color: #333;
+  font-size: 0.42666667rem;
+  padding: 0.4rem;
+  line-height: 1.6;
+}

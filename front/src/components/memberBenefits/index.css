@@ -1,0 +1,71 @@
+.benefit .benefit-title {
+  width: 2.53333333rem;
+  font-family: "PingFangSC-Simbold";
+  color: #333;
+  font-size: 0.48rem;
+  padding-top: 0.53333333rem;
+  line-height: 1;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+.benefit .benefit-title:after,
+.benefit .benefit-title:before {
+  content: "";
+  display: block;
+  width: 0.93333333rem;
+  height: 0.02666667rem;
+  background: #333;
+  position: absolute;
+}
+.benefit .benefit-title:after {
+  left: 100%;
+  top: 0.77333333rem;
+}
+.benefit .benefit-title:before {
+  left: -0.93333333rem;
+  top: 0.77333333rem;
+}
+.benefit .benefit-list {
+  padding: 0.4rem;
+}
+.benefit .benefit-list .benefit-item {
+  font-family: "PingFangSC-Regular";
+  color: #333;
+  font-size: 0.4rem;
+  line-height: 1.6;
+}
+.benefit .benefit-list .benefit-item .item-name {
+  font-weight: bold;
+}
+.benefit .card-img {
+  background: #fff;
+  padding: 0.4rem;
+}
+.benefit .card-img img {
+  display: block;
+  width: 7.86666667rem;
+  height: auto;
+  margin: 0 auto;
+}
+.benefit .card-content {
+  background: #fff;
+  padding: 0.13333333rem 0.4rem 0.66666667rem;
+  font-family: "PingFangSC-Regular";
+  font-size: 0.37333333rem;
+  color: #666;
+}
+.benefit .card-content p {
+  line-height: 1.6;
+}
+.benefit .card-content p span {
+  color: #333;
+  font-weight: bold;
+}
+.benefit .card-tip {
+  font-family: "PingFangSC-Simbold";
+  color: #333;
+  font-size: 0.42666667rem;
+  padding: 0.4rem;
+  line-height: 1.6;
+}

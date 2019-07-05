@@ -1,0 +1,77 @@
+html,
+body,
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+}
+body {
+  font: 14px "PingFangSC-Regular Microsoft Yahei", Helvetica, Arial;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+i {
+  font-style: normal;
+}
+input[type="text"],
+input[type="number"],
+input[type="phone"],
+input[type="password"] {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+::-webkit-input-placeholder {
+  color: #999;
+  font-family: "PingFangSC-Regular";
+  font-size: 16px;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  width: 0;
+  height: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.toast {
+  position: absolute;
+  z-index: 999;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.btn-disabled {
+  background: #eee;
+  color: #fff;
+}
+body {
+  background: #eee;
+  line-height: 1;
+}

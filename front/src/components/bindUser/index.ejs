@@ -1,0 +1,17 @@
+<div class="bind-user">
+    <div class="card-img">
+        <img id="cardImg" src="<%=data.previewImage%>" alt="">
+    </div>
+    <div class="card-form" style="display:block;">
+        <%if(data.isBindPhone){%>
+            <div class="card-form-tip">
+                尊敬的客户：<br>您好，请您完善下方信息，并确认提交。谢谢！
+            </div>
+            <div class="card-form-wrap"></div>
+            <%}else{%>
+                <div class="common-btn submit-btn" id="submit-btn-hadBind">
+                    <%=data.btnText%>
+                </div>
+                <%}%>
+    </div>
+</div>

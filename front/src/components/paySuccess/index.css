@@ -1,0 +1,56 @@
+.product .product-tip {
+  padding: 0.4rem;
+  font-family: "PingFangSC-Simbold";
+  font-size: 0.4rem;
+  color: #333;
+}
+.product .product-title {
+  font-family: "PingFangSC-Regular";
+  font-size: 0.37333333rem;
+  color: #999;
+  text-align: center;
+}
+.product .product-title span {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+}
+.product .product-title span:after {
+  content: "";
+  display: block;
+  width: 0.8rem;
+  height: 0.02666667rem;
+  background: #999;
+  position: absolute;
+  right: -1.06666667rem;
+  top: 0.24rem;
+}
+.product .product-title span:before {
+  content: "";
+  display: block;
+  width: 0.8rem;
+  height: 0.02666667rem;
+  background: #999;
+  position: absolute;
+  left: -1.06666667rem;
+  top: 0.24rem;
+}
+.product .product-list {
+  padding: 0.4rem;
+}
+.product .product-list .product-item {
+  font-family: "PingFangSC-Regular";
+  color: #666;
+  font-size: 0.37333333rem;
+  line-height: 1.6;
+}
+.product .product-list .product-item .item-value {
+  float: right;
+}
+.product .product-list .product-item-top {
+  font-weight: bold;
+  color: #333;
+}
+.product .product-list .product-item-top .item-name {
+  margin-left: 0.8rem;
+}

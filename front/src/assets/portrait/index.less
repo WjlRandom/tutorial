@@ -1,0 +1,68 @@
+@import "../../public/stylesheets/common.less";
+@rem: 75rem;
+html,
+body {
+  margin: 0;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+#clipArea {
+  height: 100%;
+}
+
+#view {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+.default {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 1);
+  left: 0;
+  top: 0;
+  z-index: 10;
+  .default-img {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .file {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 11;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      appearance: none;
+      outline: none;
+    }
+  }
+}
+.operate {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #fff;
+  .operate-item {
+    li {
+      height: 100 / @rem;
+      line-height: 100 / @rem;
+      &:focus {
+        background: #ccc;
+      }
+    }
+    .item-file {
+      position: relative;
+    }
+  }
+}

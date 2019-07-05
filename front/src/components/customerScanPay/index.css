@@ -1,0 +1,15 @@
+.scan-pay .banner img {
+  width: 100%;
+}
+.scan-pay .tip {
+  padding: 0.66666667rem 0.4rem 1.06666667rem;
+  font-family: "PingFangSC-Simbold";
+  color: #333;
+  font-size: 0.48rem;
+}
+.scan-pay .tip span {
+  color: #f85f48;
+}
+.scan-pay .submit-btn {
+  margin: 0 0.32rem;
+}

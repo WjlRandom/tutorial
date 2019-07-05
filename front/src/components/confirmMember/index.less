@@ -1,0 +1,71 @@
+@rem: 75rem;
+.list-item {
+  background: #fff;
+  padding: 20 / @rem 0;
+  display: flex;
+  border-radius: 12 / @rem;
+  margin-bottom: 20 / @rem;
+  flex-wrap: wrap;
+  .list-item-left {
+    padding-left: 10 / @rem;
+    padding-right: 12 / @rem;
+    img {
+      width: 126 / @rem;
+      height: 122 / @rem;
+      display: block;
+      border-radius: 8 / @rem;
+    }
+  }
+  .list-item-right {
+    > div:nth-of-type(1) {
+      font-family: "PingFangSC-Regular";
+      font-size: 28 / @rem;
+      color: #333;
+      margin-bottom: 20 / @rem;
+      margin-top: 24 / @rem;
+      .name {
+        margin-right: 22 / @rem;
+      }
+      .status {
+        margin-left: 10 / @rem;
+        display: inline-block;
+        width: 32 / @rem;
+        height: 32 / @rem;
+        background: url(/public/images/goods.png) no-repeat center;
+        background-size: 32 / @rem;
+        vertical-align: middle;
+        margin-top: -4 / @rem;
+      }
+      .phone {
+        margin-left: 14 / @rem;
+      }
+    }
+    > div:nth-of-type(2) {
+      font-size: 28 / @rem;
+      color: #333;
+      .date {
+        font-family: "PingFangSC-Light";
+        margin-right: 32 / @rem;
+      }
+      .sum {
+        font-family: "PingFangSC-Simbold";
+      }
+    }
+  }
+  .list-item-bottom {
+    width: 100%;
+    text-align: right;
+    .confirm-btn {
+      width: 150 / @rem;
+      height: 60 / @rem;
+      line-height: 60 / @rem;
+      background: #f85f48;
+      color: #fff;
+      text-align: center;
+      border: none;
+      border-radius: 4 / @rem;
+      margin-right: 20 / @rem;
+      font-size: 36 / @rem;
+    }
+  }
+}

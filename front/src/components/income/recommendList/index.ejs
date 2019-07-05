@@ -1,0 +1,29 @@
+<div class="income-list">
+    <div class="income-list-title">
+        <ul>
+            <li>会员</li>
+            <li>卡类型</li>
+            <li>佣金</li>
+            <li>注册时间</li>
+        </ul>
+    </div>
+    <div class="income-list-main">
+        <%data.forEach(function(item){%>
+            <ul>
+                <li>
+                    <%=item.name%>
+                </li>
+                <li>
+                    <%=item.cardTypeName%>
+                </li>
+                <li>
+                    <%=item.earnings%>
+                </li>
+                <li>
+                    <%=item.startDateStr%>
+                </li>
+            </ul>
+            <%})%>
+
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="benefit">
+    <div class="benefit-title">
+        会员权益
+    </div>
+    <ul class="benefit-list">
+        <%data.forEach(function(item){%>
+            <li class="benefit-item">
+                <span class="item-name"><%=item.name%>：</span>
+                <span class="item-main"><%=item.content%></span>
+            </li>
+            <%})%>
+    </ul>
+</div>

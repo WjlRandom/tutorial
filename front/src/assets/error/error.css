@@ -1,0 +1,6 @@
+.error-img {
+  width: 200px;
+  height: 200px;
+  background: url("images/img.png") no-repeat center;
+  background-size: 100%;
+}

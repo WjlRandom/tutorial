@@ -1,0 +1,28 @@
+@rem: 75rem;
+.income-list {
+  .income-list-title {
+    background: #ffd2d5;
+    border-radius: 12 / @rem 12 / @rem 0 0;
+  }
+  ul {
+    display: flex;
+    li {
+      width: 25%;
+      height: 96 / @rem;
+      line-height: 96 / @rem;
+      font-family: "PingFangSC-Regular";
+      font-size: 28 / @rem;
+      color: #333;
+      text-align: center;
+      overflow: hidden;
+    }
+  }
+  .income-list-main {
+    ul:nth-of-type(odd) {
+      background: #eee;
+    }
+    ul:nth-of-type(even) {
+      background: #f3f3f3;
+    }
+  }
+}

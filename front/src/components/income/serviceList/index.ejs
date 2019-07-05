@@ -1,0 +1,29 @@
+<div class="income-list">
+    <div class="income-list-title">
+        <ul>
+            <li>会员</li>
+            <li>次数</li>
+            <li>佣金</li>
+            <li>最近时间</li>
+        </ul>
+    </div>
+    <div class="income-list-main">
+        <%data.forEach(function(item){%>
+            <ul>
+                <li>
+                    <%=item.name%>
+                </li>
+                <li>
+                    <%=item.serviceCount%>
+                </li>
+                <li>
+                    <%=item.serviceSum%>
+                </li>
+                <li>
+                    <%=item.createDateStr%>
+                </li>
+            </ul>
+            <%})%>
+
+    </div>
+</div>

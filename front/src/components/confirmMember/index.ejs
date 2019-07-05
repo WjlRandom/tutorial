@@ -1,0 +1,24 @@
+<%data.forEach(function(item){%>
+    <div class="list-item">
+        <div class="list-item-left">
+            <img src="<%=item.headImageUrl%>" alt="">
+        </div>
+        <div class="list-item-right">
+            <div>
+                <span class="name"><%=item.personName%></span><span class="type"><%=item.cardName%></span>
+                <%if(item.isSellProducts==1){%>
+                    <i class="status"></i>
+                    <%}%>
+                        <span class="phone"><%=item.phoneNumber%></span>
+            </div>
+            <div>
+                <span class="date"><%=item.dateStr%></span>
+            </div>
+        </div>
+        <%if(item.isVerify==0){%>
+            <div class="list-item-bottom">
+                <button class="confirm-btn" id="<%=item.cardId%>">确认</button>
+            </div>
+            <%}%>
+    </div>
+    <%})%>
