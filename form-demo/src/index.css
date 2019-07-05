@@ -1,0 +1,51 @@
+.ldy-form {
+  width: 100%;
+}
+.ldy-form .form-item {
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+}
+.ldy-form .form-item .item-rel {
+  display: block;
+  min-width: 80px;
+}
+.ldy-form .form-item .item-input {
+  display: block;
+  flex: 1;
+}
+.ldy-form .form-item .item-input select,
+.ldy-form .form-item .item-input input[type="text"],
+.ldy-form .form-item .item-input input[type="password"],
+.ldy-form .form-item .item-input input[type="number"] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+}
+.ldy-form .form-item .item-btn {
+  display: block;
+  min-width: 90px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+}
+.ldy-form .form-submit {
+  width: 100%;
+}
+.ldy-form .form-submit .submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+  background: #ccc;
+  margin: 0 auto;
+  text-align: center;
+}
