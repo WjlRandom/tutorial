@@ -1,0 +1,19 @@
+<div class="J_selector">
+    <div class="selector-warpper">
+        <ul class="J_selectArea">
+            <% data.items.forEach(function(item, index){ %>
+            <li class="J_selectItem <% if(index == 0){ %>J_selected<% } %>">
+                <em class="J_selectItem_circle">
+                    <i class="J_selectItem_square"></i>
+                </em>
+                <span><%= item.name %></span>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="select-menu-warpper">
+        <div class="J_cancleSelect">取消</div>
+        <div class="J_confirmSelect">确认</div>
+    </div>
+</div>
+<div class="J_selector_mask"></div>

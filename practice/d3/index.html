@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>d3</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  </head>
+  <body>
+    <div></div>
+  </body>
+  <script>
+    //d3.selectAll("p").style("color", "blue");
+    // d3.selectAll("p")
+    //   .data([4, 8, 15, 16, 23, 42])
+    //   .enter()
+    //   .append("p")
+    //   .style("font-size", function(d) {
+    //     return d + "px";
+    //   });
+
+    d3.select("div")
+      .selectAll("p")
+      .data([4, 8, 15, 16, 23, 42])
+      .enter()
+      .append("p")
+      .attr("class", "bar")
+      .style("width", function(d) {
+        return d * 10 + "px";
+      })
+      .style("height", "100px")
+      .style("background", "#ccc")
+      .text(function(d) {
+        return "I’m number " + d + "!";
+      });
+  </script>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style type="text/css">
+        .autoPlanBottomBox {
+            width: 100%;
+        }
+        
+        .bottom-box-body {
+            background: #c9cdd3;
+            position: relative;
+        }
+        
+        .select-box-list {
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .select-box-list li {
+            color: #898c90;
+            font-size: 28px;
+            line-height: 1.8em;
+        }
+        
+        .select-box-list li.active {
+            color: #484a4c;
+        }
+        
+        .scale-box {
+            position: absolute;
+            overflow: hidden;
+            width: 100%;
+            text-align: center;
+            background: #e0e3e6;
+            z-index: 9999;
+        }
+        
+        .scale-box .select-box-list {
+            transition-property: transform;
+            transform-origin: 0px 0px 0px;
+            transform: translate3d(0px, -50px, 0);
+        }
+        
+        .scale-box li {
+            font-size: 28px;
+            line-height: 1.8em;
+            color: #484a4c;
+            transform: scale(1.2);
+        }
+        
+        .rDialog-wrap {
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="rDialog autoPlanBottomBox" style="top: inherit;z-index: 10000; left: 0px; bottom: 0;display:none">
+            <div class="rDialog-wrap">
+                <div class="bottom-box-header" style="  
+                background: #EEEFF0;line-height: 50px;color: #fff;"><span class="cancelBottomBox" style="float:left;color: #1782FC;width:30px;padding: 5px 20px">&lt;</span>
+                    <span class="confirmBottomBox" style="float:right;padding: 5px 20px;color: #1782FC;">确定</span>
+                    <div class="clear" style="  
+                    clear: both;  
+                "></div>
+
+                </div>
+                <div class="bottom-box-body">
+                    <div class="scale-box">
+                    </div>
+                    <div class="wrapperBottom">
+                        <ul class="select-box-list">
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>请选择日期</li>
+                            <li data-date="1">每月1日</li>
+                            <li data-date="2">每月2日</li>
+                            <li data-date="3">每月3日</li>
+                            <li data-date="4">每月4日</li>
+                            <li data-date="5">每月5日</li>
+                            <li data-date="6">每月6日</li>
+                            <li data-date="7">每月7日</li>
+                            <li data-date="8">每月8日</li>
+                            <li data-date="9">每月9日</li>
+                            <li data-date="10">每月10日</li>
+                            <li data-date="11">每月11日</li>
+                            <li data-date="12">每月12日</li>
+                            <li data-date="13">每月13日</li>
+                            <li data-date="14">每月14日</li>
+                            <li data-date="15">每月15日</li>
+                            <li data-date="16">每月16日</li>
+                            <li data-date="17">每月17日</li>
+                            <li data-date="18">每月18日</li>
+                            <li data-date="19">每月19日</li>
+                            <li data-date="20">每月20日</li>
+                            <li data-date="21">每月21日</li>
+                            <li data-date="22">每月22日</li>
+                            <li data-date="23">每月23日</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="rDialog-mask autoPlanBottomBox-mask" style="z-index: 9999;display:none"></div>
+    </div>
+
+
+</body>
+<script>
+    import {
+        iScroll
+    } from '../libs/iscroll';
+    /**  
+     * options 参数  
+     *    cancel  取消回调  
+     *    success 成功回调  
+     */
+    function BottomBox(options) {
+        var self = this;
+        self.settings = $.extend({
+            initScrollIndex: 2
+        }, options);
+        $("body").off("click", ".cancelBottomBox").off("click", ".confirmBottomBox").on("click", ".cancelBottomBox", function() {
+            self.hide();
+            options.cancel && options.cancel();
+        }).on("click", ".confirmBottomBox", function() {
+            self.hide();
+            options.success && options.success(self.getValue());
+        });
+    };
+
+    BottomBox.prototype.show = function() {
+        // initScrollIndex 初始选定的索引  
+        var self = this,
+            initScrollIndex = this.settings.initScrollIndex;
+        $(".autoPlanBottomBox,.autoPlanBottomBox-mask").show();
+        var wrapperEl = $(".wrapperBottom");
+        // 如果有传date参数，则选定对应的那天  
+        if (this.settings.date) {
+            initScrollIndex = wrapperEl.find("li[data-date='" + this.settings.date + "']").index();
+        }
+        $(".scale-box").append(wrapperEl.children().clone());
+        setTimeout(function() {
+            // UI初始化  
+            var scaleBox = $(".scale-box .select-box-list"),
+                scale = $(".select-box-list").eq(0).height() / $(".select-box-list").eq(1).height();
+            var liHeight = wrapperEl.find("li").eq(0).height();
+            self.scaleBoxHeight = liHeight * scale;
+            wrapperEl.css("height", (liHeight * 5) + 'px');
+            $(".scale-box").css({
+                "height": self.scaleBoxHeight + "px",
+                top: (self.scaleBoxHeight * 2) + "px"
+            });
+
+            wrapperEl.css("height", liHeight * 5);
+            $(".autoPlanBottomBox,.autoPlanBottomBox-mask").show();
+            // 初始化iscroll  
+            self.bottomScroller = new iScroll(wrapperEl[0], {
+                linkWrapper: scaleBox[0],
+                linkWrapperTop: -liHeight * 2,
+                hScroll: false,
+                vScroll: true,
+                hScrollbar: false,
+                vScrollbar: false,
+                snap: "li",
+                onScrollEnd: function() {
+                    self.translateY = Math.abs((this.y - liHeight * 2) * scale);
+                }
+            });
+            self.bottomScroller.scrollToElement(wrapperEl.find("li").eq(initScrollIndex)[0], 200);
+        }, 100);
+    };
+    BottomBox.prototype.hide = function() {
+        $(".autoPlanBottomBox,.autoPlanBottomBox-mask").hide();
+    };
+    BottomBox.prototype.getValue = function() {
+        var index = parseInt(this.translateY / this.scaleBoxHeight, 10);
+        return $(".wrapperBottom").find("li").eq(index).data("date");
+    };
+    export default {
+        ready() {
+
+        },
+        data() {
+            return {
+
+            }
+        },
+        methods: {
+            init: function(options) {
+                this.bottomBoxObj = new BottomBox(options);
+            },
+            show: function() {
+                this.bottomBoxObj.show();
+            },
+            hide: function() {
+                this.bottomBoxObj.hide();
+            },
+            getValue: function() {
+                return this.bottomBoxObj.getValue();
+            }
+        }
+    }
+</script>
+
+</html>

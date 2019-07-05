@@ -1,0 +1,101 @@
+@import "../../less/variable";
+.J_selector_mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.3;
+	z-index: 999;
+}
+.J_selector {
+    box-sizing: border-box;
+	position: fixed;
+	width: 606/@rem;
+	max-height:618/@rem;
+	left: 50%;
+	margin-left: -303/@rem;
+	top: 50%;
+	margin-top: -309/@rem;
+	background-color: #fff;
+	z-index: 1000;
+	height: auto;
+	border-radius: 6/@rem;
+	.selector-warpper {
+	    box-sizing: border-box;
+		padding: 14/@rem 30/@rem 0 30/@rem;
+		.J_selectArea {
+			max-height: 420/@rem;
+			overflow-y:auto;
+			.J_selectItem {
+				display: block;
+				line-height: 94/@rem;
+				border-bottom: 1px solid #e4e4e4;
+				font-size: 30/@rem;
+				position: relative;
+				padding-left: 45/@rem;
+				white-space:nowrap;
+				text-overflow:ellipsis;
+				overflow:hidden;
+				width: 546/@rem;
+   	 			box-sizing: border-box;
+				span {
+					line-height: 94/@rem;
+					color:#282828;
+				}
+				.J_selectItem_circle {
+					display: inline-block;
+					width: 15px;
+					height: 15px;
+					border-radius:15px;
+					border: 1px solid #d7d7d7;
+					position: absolute;
+					left: 3/@rem;
+					top: 50%;
+					margin-top: -7.5px;
+					.J_selectItem_square {
+						width: 5px;
+						height: 5px;
+						background-color: #666666;
+						border-radius:5px;
+						display: none;
+						position: absolute;
+						top: 50%;
+						margin-top: -2.5px;
+						left: 50%;
+						margin-left: -2.5px;
+					}
+				}
+				&.J_selected {
+					.J_selectItem_circle {
+						.J_selectItem_square {
+							display: block;
+						}
+					}
+				}
+			}
+			.J_selectItem:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+	.select-menu-warpper {
+		margin-top: 14/@rem;
+	    box-sizing: border-box;
+	    border-top: 1px solid #d7d7d7;
+		.J_cancleSelect, .J_confirmSelect {
+			width: 50%;
+	    	box-sizing: border-box;
+			height: 120/@rem;
+			font-size: 34/@rem;
+			color: #5995ff;
+			text-align: center;
+			float: left;
+			line-height: 120/@rem;
+		}
+		.J_cancleSelect {
+			border-right: 1px solid #d7d7d7;
+		}
+	}
+}

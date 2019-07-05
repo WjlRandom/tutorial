@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css3逐帧动画</title>
+    <style>
+        div {
+            width: 320px;
+            height: 378px;
+            background: url(./imgs.png) no-repeat;
+            background-position: (0 0);
+            transition: all .5s;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    var box = document.getElementById("box");
+    count = 320;
+    setInterval(function() {
+        count += 10;
+        box.style.backgroundPosition = (-count + "px 0");
+    }, 500);
+</script>

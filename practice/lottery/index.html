@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .big {
+            width: 318px;
+            height: 318px;
+            margin: 100px auto;
+        }
+        
+        .big>div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            float: left;
+            line-height: 100px;
+            text-align: center;
+            border: solid;
+        }
+        
+        .big>div:nth-of-type(5) {
+            background: yellow;
+            cursor: pointer;
+        }
+        
+        .act {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <div id="small-1" class="small act">1</div>
+        <div id="small-2" class="small">2</div>
+        <div id="small-3" class="small">3</div>
+        <div id="small-8" class="small">8</div>
+        <div id="cj">点击抽奖</div>
+        <div id="small-4" class="small">4</div>
+        <div id="small-7" class="small">7</div>
+        <div id="small-6" class="small">6</div>
+        <div id="small-5" class="small">5</div>
+    </div>
+    <script>
+        var arrDiv = document.getElementsByClassName("small");
+        var oCj = document.getElementById("cj");
+        var num = 1;
+        var shijian = Math.random() * 5000 + 3200;
+        oCj.onclick = function() {
+            oTime = setInterval(function() {
+                num += 1;
+                if (num > arrDiv.length) {
+                    num = 1
+                }
+                for (j = 0; j < 8; j++) {
+                    arrDiv[j].setAttribute("class", "small");
+                }
+                document.getElementById("small-" + num).setAttribute("class", "small act");
+            }, 80);
+            setTimeout(function() {
+                clearInterval(oTime)
+            }, shijian);
+        }
+    </script>
+</body>
+
+</html>

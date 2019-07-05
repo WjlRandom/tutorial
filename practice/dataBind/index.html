@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>双向数据绑定和单向数据绑定</title>
+
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="text">
+        <p>{{text}} this is {{text}}</p>
+        <span>{{ text }}</span>
+    </div>
+</body>
+<script>
+    function compile(parentNode) {
+        var childNodes = parentNode.childNodes;
+
+        // console.log(childNodes);
+        var reg = /^\{\{.*\}\}$/;
+        childNodes.forEach(node => {
+            // console.log(node);
+            if (node.nodeName == "#text") {
+                console.log("--++++++-");
+                // console.log("nodeValue", node.nodeValue);
+                // var arr = node.nodeValue.match(reg);
+                // console.log(node.nodeValue);
+                console.log(reg.exec(node.nodeValue));
+            } else {
+                compile(node);
+            }
+        });
+
+    }
+
+    function nodeToFragment(wrap) { //虚拟节点
+        var flag = document.createDocumentFragment();
+        var child;
+        compile(wrap);
+        // console.log(wrap.childNodes);
+        // flag.appendChild(child);
+        // return flag;
+    }
+
+    function Vue(options) {
+        this.data = options.data;
+        var id = options.el;
+        var dom = nodeToFragment(document.getElementById(id));
+        // document.getElementById(id).appendChild(dom);
+    }
+    var vm = new Vue({
+        el: 'app',
+        data: {
+            text: 'hello world'
+        }
+    });
+</script>
+
+</html>

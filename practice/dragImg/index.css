@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.drag-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* background: #ccc; */
+    overflow: hidden;
+}
+
+.drag-wrap::before,
+.drag-wrap::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 1;
+}
+
+.drag-wrap::before {
+    left: 0;
+}
+
+.drag-wrap::after {
+    right: 0;
+}
+
+.drag-wrap .drag-img {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    width: 80%;
+    height: auto;
+}

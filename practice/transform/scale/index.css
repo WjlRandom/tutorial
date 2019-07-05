@@ -1,0 +1,20 @@
+.scale {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    margin: 100px auto;
+    transform: scale(0.1, 0.1);
+}
+
+.scaleChange {
+    animation: enlarge 2s 1;
+}
+
+@keyframes enlarge {
+    from {
+        transform: scale(0.1, 0.1);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}

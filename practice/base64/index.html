@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--计算base64转换为字节占内存大小-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>base64转字节</title>
+    <script src="../lib/jquery.min.js"></script>
+</head>
+
+<body>
+    <input id="fileInput" type="file" value="点击上传文件" style="width:100px;height:50px;background:#ccc;">
+</body>
+
+</html>
+<script>
+    $("#fileInput").change(function(e) {
+        var file = e.target.files[0];
+        var reader = new FileReader();
+        console.log(file);
+        if (file) {
+            //将文件以Data URL形式读入页面  
+            reader.readAsDataURL(file);
+            reader.onload = function(e) {
+                console.log(reader.result)
+                var baseStr = reader.result.replace(/data:image\/.*;base64,/, '');
+                var equalIndex = baseStr.indexOf('=');
+                if (equalIndex > 0) {
+                    baseStr = baseStr.substring(0, equalIndex);
+                }
+                var l = baseStr.length;
+                console.log(l);
+                var fileLength = parseInt(l - l / 8 * 2);
+                console.log(fileLength);
+            }
+        }
+    })
+</script>
