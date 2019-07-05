@@ -1,0 +1,26 @@
+.upload-pre {
+  width: 100%;
+  display: flex;
+}
+.upload-pre .upload-pre-item {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.upload-pre .upload-pre-item .pre-item-img {
+  width: 100%;
+  height: 100%;
+}
+.upload-pre .upload-pre-item .pre-item-delete {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}

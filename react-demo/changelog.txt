@@ -1,0 +1,3 @@
+上传图片接口地址 
+https://comm.tonglibang.com/communitym/addQr.json
+参数：activityName arrayObj

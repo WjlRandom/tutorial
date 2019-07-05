@@ -1,0 +1,34 @@
+.sidebar {
+  width: 100%;
+
+  .sidebar-inner {
+    width: 100%;
+    word-wrap: break-word;
+    .sidebar-list {
+      a {
+        color: #fff;
+        font-size: 16px;
+        display: block;
+        text-decoration: none;
+        height: 50px;
+        line-height: 50px;
+        padding-left: 20px;
+        overflow: hidden;
+      }
+      .sidebar-active {
+        color: #f00 !important;
+        background: #efefef;
+      }
+      .sub-active {
+        background: #ccc;
+        color: #333;
+      }
+    }
+    .sub-link {
+      display: none;
+    }
+    .sub-link-active {
+      display: block;
+    }
+  }
+}

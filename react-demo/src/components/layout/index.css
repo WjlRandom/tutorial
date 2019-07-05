@@ -1,0 +1,78 @@
+.layout {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.layout .main {
+  width: 100%;
+  height: 94vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.layout .main .sidebar-wrap {
+  width: 20vw;
+  background: #444;
+}
+.layout .main .main-content {
+  width: 80vw;
+  background: #efefef;
+  height: 100%;
+  overflow: auto;
+}
+.layout .main .main-content .upload .upload-title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.layout .main .main-content .upload .upload-form .upload-form-item {
+  padding: 10px 0;
+}
+.layout .main .main-content .upload .upload-form .upload-form-item .form-item-file {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  position: relative;
+  outline: none;
+  margin-right: 20px;
+  vertical-align: top;
+}
+.layout .main .main-content .upload .upload-form .upload-form-item .form-item-file::after {
+  content: "选择文件";
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: #5cb85c;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+.layout .main .main-content .upload .upload-form .upload-form-item .form-item-submit {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #5cb85c;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  outline: none;
+}
+.layout .main .main-content .upload .upload-form .upload-form-item .form-item-input {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  outline: none;
+  padding-left: 10px;
+}
