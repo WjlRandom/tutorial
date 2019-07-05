@@ -1,0 +1,14 @@
+{
+    "name": "testgittools",
+    "version": "1.0.0",
+    "description": "使用npm git-tools工具操作git仓库",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "git-tools": "^0.3.0"
+    }
+}

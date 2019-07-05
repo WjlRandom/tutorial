@@ -32,11 +32,11 @@ module.exports = {
     entry: getEntry(__dirname, "src/assets/js"),
     output: {
         path: path.resolve(__dirname, "./src/dist"), //必须是绝对路径
-        publicPath: "/",
+        publicPath: "/dist/",
         filename: "[name].js"
     },
     devServer: {
-        contentBase: path.join(__dirname, "src/pages/"),
+        contentBase: path.join(__dirname, "src/"),
         hot: true,
         inline: true,
         port: "3333"
@@ -66,6 +66,14 @@ module.exports = {
             {
                 test: /\.ejs$/,
                 use: { loader: "ejs-loader" }
+            },
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'file-loader?limit=1000000&name=images/[hash:8].[name].[ext]'
+            },
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader?limit=1000000&name=images/[hash:8].[name].[ext]'
             }
         ]
     },
